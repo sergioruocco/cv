@@ -1,0 +1,67 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.45cm,top=1.25cm,bottom=1.3cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs}
+\usepackage{ragged2e}
+\usepackage{needspace}
+\usepackage{hyperref}
+
+% Liberation Sans is metric-compatible with Arial and keeps text extraction
+% (and therefore applicant-tracking systems) clean.
+\setmainfont{Liberation Sans}
+
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{text}{HTML}{333333}
+\definecolor{muted}{HTML}{5A6570}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent,
+  citecolor=accent,
+  breaklinks=true,
+  pdftitle={Curriculum Vitae},
+  pdfauthor={Sergio Ruocco}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\emergencystretch}{3em}
+\linespread{1.02}
+\color{text}
+
+% Name (H1) is unused in PDF builds; the header is injected as raw LaTeX.
+\titleformat{\section}
+  {\centering\fontsize{22}{26}\selectfont\bfseries\color{accent}}
+  {}{0em}{}
+\titlespacing*{\section}{0pt}{0pt}{2pt}
+
+% Section headings (H2)
+\titleformat{\subsection}
+  {\needspace{4\baselineskip}\fontsize{11.5}{14}\selectfont\bfseries\color{accent}}
+  {}{0em}{}[\vspace{-0.45em}{\color{accent}\rule{\linewidth}{0.6pt}}]
+\titlespacing*{\subsection}{0pt}{8pt plus 2pt minus 1pt}{3pt}
+
+% Group headings inside a section (H3)
+\titleformat{\subsubsection}
+  {\needspace{3\baselineskip}\fontsize{10}{12}\selectfont\bfseries\color{accent}}
+  {}{0em}{}
+\titlespacing*{\subsubsection}{0pt}{6pt plus 1pt minus 1pt}{2pt}
+
+\setlist[itemize]{leftmargin=1.1em,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=1pt,topsep=1pt,parsep=0pt,partopsep=0pt}
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\renewcommand{\arraystretch}{1.12}
+
+\begin{document}
+$body$
+\end{document}

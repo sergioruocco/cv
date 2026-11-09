@@ -1,0 +1,241 @@
+# Publications. `featured: true` marks the top-five list used by short profiles.
+# Citation counts are stored per source so a profile can choose which to show.
+#   scholar  = counts shown in the 2025 CV; date in data/citations.yml (scholar_retrieved)
+#   openalex = counts from OpenAlex; date in data/citations.yml (retrieved)
+# Leave a count out when it is not known; the renderer simply omits it.
+
+- id: J1
+  type: journal
+  year: 2018
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Time-Based Sensing for Reference-Less and Robust Read in STT-MRAM Memories"
+  venue: "IEEE Transactions on Circuits and Systems I: Regular Papers"
+  volume: "65"
+  issue: "10"
+  pages: "3338–3348"
+  doi: "10.1109/TCSI.2018.2828611"
+  citations:
+    scholar: 19
+    openalex: 39
+  featured: true
+
+- id: J2
+  type: journal
+  year: 2017
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Dynamic Reference Voltage Sensing Scheme for Read Margin Improvement in STT-MRAMs"
+  venue: "IEEE Transactions on Circuits and Systems I: Regular Papers"
+  volume: "65"
+  issue: "4"
+  pages: "1269–1278"
+  doi: "10.1109/TCSI.2017.2749522"
+  citations:
+    openalex: 33
+  featured: false
+
+- id: J3
+  type: journal
+  year: 2016
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Novel Boosted-Voltage Sensing Scheme for Variation-Resilient STT-MRAM Read"
+  venue: "IEEE Transactions on Circuits and Systems I: Regular Papers"
+  volume: "63"
+  issue: "10"
+  pages: "1652–1660"
+  doi: "10.1109/TCSI.2016.2582203"
+  citations:
+    openalex: 31
+  featured: false
+
+- id: J4
+  type: journal
+  year: 2016
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Voltage Scaled STT-MRAMs Towards Minimum-Energy Write Access"
+  venue: "IEEE Journal on Emerging and Selected Topics in Circuits and Systems"
+  volume: "6"
+  issue: "3"
+  pages: "305–318"
+  doi: "10.1109/JETCAS.2016.2547702"
+  citations:
+    openalex: 22
+  featured: false
+
+- id: J5
+  type: journal
+  year: 2008
+  authors: "S. Ruocco"
+  title: "A Real-Time Programmer's Tour of General-Purpose L4 Microkernels"
+  venue: "EURASIP Journal on Embedded Systems"
+  volume: "2008"
+  pages: "1–14"
+  doi: "10.1155/2008/234710"
+  citations:
+    scholar: 32
+    openalex: 17
+  featured: true
+
+- id: C1
+  type: conference
+  year: 2018
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Novel Time-Based Sensing Scheme for STT-MRAMs"
+  venue: "IEEE International Symposium on Circuits and Systems (ISCAS)"
+  location: "Florence, Italy"
+  pages: "1–5"
+  doi: "10.1109/ISCAS.2018.8350966"
+  citations:
+    scholar: 8
+    openalex: 1
+  featured: true
+
+- id: C2
+  type: conference
+  year: 2016
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "STT-MRAM Write Energy Minimization via Area Optimization under Dynamic Voltage Scaling"
+  venue: "IEEE International Symposium on Circuits and Systems (ISCAS)"
+  pages: "2791–2794"
+  doi: "10.1109/ISCAS.2016.7539172"
+  citations:
+    openalex: 0
+  featured: false
+
+- id: C3
+  type: conference
+  year: 2016
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Boosted Sensing for Enhanced Read Stability in STT-MRAMs"
+  venue: "IEEE International Symposium on Circuits and Systems (ISCAS)"
+  pages: "1238–1241"
+  doi: "10.1109/ISCAS.2016.7527471"
+  citations:
+    openalex: 11
+  featured: false
+
+- id: C4
+  type: conference
+  year: 2015
+  authors: "S. Ruocco, D.-K. Le"
+  title: "Efficient Persistence of Financial Transactions in NVM-based Cloud Data Centers"
+  venue: "International Conference on Cloud Computing Research and Innovation (ICCCRI)"
+  pages: "25–36"
+  doi: "10.1109/ICCCRI.2015.29"
+  citations:
+    scholar: 1
+    openalex: 0
+  featured: true
+
+- id: C5
+  type: conference
+  year: 2015
+  authors: "Q. Trinh, S. Ruocco, M. Alioto"
+  title: "Modeling the Impact of Dynamic Voltage Scaling on 1T-1J STT-RAM Write Energy and Performance"
+  venue: "IEEE International Symposium on Circuits and Systems (ISCAS)"
+  pages: "2313–2316"
+  doi: "10.1109/ISCAS.2015.7169146"
+  citations:
+    openalex: 4
+  featured: false
+
+- id: C6
+  type: conference
+  year: 2007
+  authors: "K. Elphinstone, D. Greenaway, S. Ruocco"
+  title: "Lazy Queueing and Direct Process Switch — Merit or Myths?"
+  venue: "Workshop on Operating Systems Platforms for Embedded Real-Time Applications (OSPERT)"
+  location: "Pisa, Italy"
+  doi: ""
+  url: "http://www.ertos.nicta.com.au/publications/papers/Elphinstone_GR_07.abstract"
+  citations:
+    openalex: 2
+  featured: false
+
+- id: C7
+  type: conference
+  year: 2006
+  authors: "S. Ruocco"
+  title: "User-Level Fine-Grained Adaptive Real-Time Scheduling via Temporal Reflection"
+  venue: "27th IEEE Real-Time Systems Symposium (RTSS)"
+  location: "Rio de Janeiro, Brazil"
+  pages: "246–256"
+  doi: "10.1109/RTSS.2006.50"
+  citations:
+    scholar: 12
+    openalex: 8
+  featured: true
+
+- id: C8
+  type: conference
+  year: 2006
+  authors: "S. Ruocco"
+  title: "Real-time Programming and L4 Microkernels"
+  venue: "Workshop on Operating Systems Platforms for Embedded Real-Time Applications (OSPERT)"
+  location: "Dresden, Germany"
+  doi: ""
+  url: "http://www.ertos.nicta.com.au/publications/papers/Ruocco_06.abstract"
+  citations: {}
+  featured: false
+
+- id: C9
+  type: conference
+  year: 2005
+  authors: "D. C. Snowdon, S. Ruocco, G. Heiser"
+  title: "Power Management and Dynamic Voltage Scaling: Myths and Facts"
+  venue: "Workshop on Power Aware Real-time Computing (PARC)"
+  location: "New Jersey, USA"
+  doi: ""
+  url: "http://www.ertos.nicta.com.au/publications/papers/Snowdon_RH_05.abstract"
+  citations:
+    openalex: 115
+  featured: false
+
+- id: C10
+  type: conference
+  year: 2005
+  authors: "K. Elphinstone, G. Heiser, R. Huuck, S. Petters, S. Ruocco"
+  title: "L4cars"
+  venue: "Embedded Security in Cars (ESCAR) Workshop"
+  location: "Cologne, Germany"
+  doi: ""
+  url: "http://www.ertos.nicta.com.au/publications/papers/Elphinstone_HHPR_05.abstract.pml"
+  citations: {}
+  featured: false
+
+- id: C11
+  type: conference
+  year: 2004
+  authors: "F. Engel, G. Heiser, I. Kuz, S. M. Petters, S. Ruocco"
+  title: "Operating Systems on SoCs: A Good Idea?"
+  venue: "Workshop on Embedded Real-Time Systems Implementation (ERTSI)"
+  location: "Lisbon, Portugal"
+  doi: ""
+  url: "http://www.ertos.nicta.com.au/publications/papers/Engel_HKPR_04.abstract"
+  citations:
+    openalex: 13
+  featured: false
+
+- id: C12
+  type: conference
+  year: 2004
+  authors: "D. Micucci, S. Ruocco, F. Tisato, A. Trentini"
+  title: "Time Sensitive Architectures: A Reflective Approach"
+  venue: "7th IEEE International Symposium on Object-Oriented Real-Time Distributed Computing (ISORC)"
+  location: "Vienna, Austria"
+  pages: "189–196"
+  doi: "10.1109/ISORC.2004.1300344"
+  citations:
+    openalex: 7
+  featured: false
+
+- id: T1
+  type: thesis
+  year: 2004
+  authors: "S. Ruocco"
+  title: "Temporal Reflection"
+  venue: "PhD thesis, Università degli Studi di Milano"
+  location: "Milan, Italy"
+  doi: ""
+  url: ""
+  citations: {}
+  featured: false

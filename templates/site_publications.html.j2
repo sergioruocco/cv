@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications — {{ profile.short_name }}</title>
+  <meta name="description" content="Publications of {{ profile.name }}.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="tagline"><a href="index.html">← {{ profile.short_name }}</a></p>
+      <h1>Publications</h1>
+      <p class="affiliation">{{ profile.affiliation }}</p>
+      <div class="contact">
+        {% if profile.nationality %}<span>Nationality: {{ profile.nationality }}</span>{% endif %}
+        {% for email in profile.emails %}
+        <a href="mailto:{{ email.address }}">{{ email.label }}</a>
+        {% endfor %}
+        {% for link in profile.links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <p class="lead">
+        Full list of journal articles, conference papers and the PhD thesis.
+        Citation counts are from OpenAlex; live counts and the h-index are on
+        {% if scholar %}<a href="{{ scholar }}">Google Scholar</a>{% else %}Google Scholar{% endif %}.
+      </p>
+
+      {% for label, pubs in pub_groups %}
+      <h2>{{ label }}</h2>
+      <ul class="pub-list">
+        {% for pub in pubs %}
+        <li class="pub">
+          <div class="pub-year">{{ pub.year }}</div>
+          <div class="pub-body">
+            <div class="pub-title">{{ pub.title }}</div>
+            <div class="pub-authors">{{ pub.authors }}</div>
+            <div class="pub-venue">
+              {{ pub.venue }}{% if pub.location %}, {{ pub.location }}{% endif %}{% if pub.volume %}, {{ pub.volume }}{% if pub.issue %}({{ pub.issue }}){% endif %}{% endif %}{% if pub.pages %}:{{ pub.pages }}{% endif %}.
+            </div>
+            <div class="pub-meta">
+              {% if citation_label(pub) %}<span>{{ citation_label(pub) }}</span>{% endif %}
+              {% if pub_url(pub) %}<a href="{{ pub_url(pub) }}">{{ pub_link_label(pub) }}</a>{% endif %}
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© {{ today[:4] }} {{ profile.short_name }}. Last updated {{ today }}.</span>
+      <span><a href="index.html">Back to CV</a></span>
+    </div>
+  </footer>
+</body>
+</html>

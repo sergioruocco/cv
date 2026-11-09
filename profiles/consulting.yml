@@ -1,0 +1,20 @@
+name: consulting
+label: "Consulting CV"
+filename: "Sergio_Ruocco_CV_consulting"
+tagline: "Embedded and real-time systems, Linux and toolchain consultant · Senior Software Engineer at EMASS"
+bio: consulting
+summary_heading: "Profile"
+sections:
+  - capabilities
+  - projects
+  - experience
+  - patents
+  - publications
+  - education
+options:
+  experience_highlights: false
+  projects: featured
+  publications: selected
+  citation_source: none
+  patents: disclosures
+  teaching: none

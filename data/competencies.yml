@@ -1,0 +1,36 @@
+primary:
+  - "Operating Systems"
+  - "Real-time Systems"
+  - "Software Engineering"
+  - "Computer Architecture"
+  - "Compilers"
+
+groups:
+  - name: "Operating systems and platforms"
+    items:
+      - "Linux (Debian, Ubuntu, Mint, Red Hat) on workstations and datacentre servers"
+      - "L4 microkernels, MbedOS, RTOS internals and porting"
+      - "Linux kernel, memory management and device drivers"
+      - "ZFS and zfs-root workstations and storage servers; IPMI, RAID, GPU servers"
+      - "Secure build systems and export-controlled software licence servers"
+
+  - name: "Languages and toolchains"
+    items:
+      - "C, GCC/G++, GDB and the GNU toolchain, native and cross-compiled"
+      - "GCC backend and cross-compiler development"
+      - "Buildroot, Android SDK, MbedOS SDK, Edge Impulse"
+      - "Python, Bash, Git, SSH, GPG, tmux/screen"
+
+  - name: "Architectures and hardware"
+    items:
+      - "ARM and RISC-V platforms; board bring-up and JTAG"
+      - "FPGA boards, peripherals, memory maps and I/O devices"
+      - "Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and storage systems"
+      - "AI accelerators and video-compression hardware"
+
+  - name: "Methods"
+    items:
+      - "Real-time scheduling and temporal reflection"
+      - "Performance analysis and system tracing"
+      - "Debugging poorly documented hardware and software"
+      - "Technical leadership, procurement and project delivery"

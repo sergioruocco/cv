@@ -1,0 +1,20 @@
+name: industry
+label: "Industry R&D CV"
+filename: "Sergio_Ruocco_CV_industry"
+tagline: "Senior Software Engineer, EMASS · Embedded and real-time systems, Linux, compilers"
+bio: industry
+summary_heading: "Profile"
+sections:
+  - skills
+  - experience
+  - projects
+  - patents
+  - publications
+  - education
+options:
+  experience_highlights: false
+  projects: featured
+  publications: selected
+  citation_source: scholar
+  patents: disclosures
+  teaching: none

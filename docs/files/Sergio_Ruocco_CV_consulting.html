@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sergio Ruocco — Consulting CV</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">:root {
+--accent: #1f4e79;
+--text: #333333;
+--muted: #5a6570;
+--rule: #d8dee5;
+}
+html {
+font-size: 10.5pt;
+}
+body {
+font-family: Inter, "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+color: var(--text);
+line-height: 1.42;
+max-width: 52rem;
+margin: 2rem auto;
+padding: 0 1.25rem;
+}
+h1 {
+color: var(--accent);
+font-size: 2rem;
+line-height: 1.1;
+margin: 0 0 0.25rem;
+}
+h2 {
+color: var(--accent);
+font-size: 1.12rem;
+margin: 1.5rem 0 0.55rem;
+padding-bottom: 0.18rem;
+border-bottom: 1px solid var(--accent);
+}
+h3 {
+color: var(--accent);
+font-size: 0.98rem;
+margin: 0.85rem 0 0.2rem;
+}
+p {
+margin: 0.35rem 0 0.55rem;
+}
+a {
+color: var(--accent);
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
+}
+ul,
+ol {
+margin: 0.2rem 0 0.7rem 1.25rem;
+padding: 0;
+}
+li {
+margin: 0.12rem 0;
+}
+strong {
+color: #1d2b3a;
+}
+em {
+color: var(--text);
+}
+hr {
+border: none;
+border-top: 1px solid var(--rule);
+margin: 1.5rem 0;
+}
+@media print {
+html {
+font-size: 9.5pt;
+}
+body {
+max-width: none;
+margin: 0;
+padding: 0;
+}
+a {
+color: var(--accent);
+}
+h2 {
+break-after: avoid;
+}
+h3 {
+break-after: avoid;
+}
+}
+</style>
+</head>
+<body>
+<h1 id="dr.-sergio-ruocco">Dr. Sergio Ruocco</h1>
+<p><strong>Embedded and real-time systems, Linux and toolchain
+consultant · Senior Software Engineer at EMASS</strong><br />
+EMASS (an NTU/A*STAR spin-off), Singapore</p>
+<p>Nationality: Italian<br />
+<a href="mailto:sergio.ruocco@gmail.com">sergio.ruocco@gmail.com</a> ·
+<a href="mailto:sergiusr@protonmail.com">sergiusr@protonmail.com
+(secure)</a> · <a href="https://scholar.google.com/citations?user=q1574qIAAAAJ">Google
+Scholar</a> · <a href="https://www.linkedin.com/in/sergio-ruocco/">LinkedIn</a> · <a href="https://sruocco-i2r.github.io/cv/">Website</a></p>
+<h2 id="capabilities">Capabilities</h2>
+<p>Engagements range from architecture reviews and feasibility studies
+to hands-on porting, driver development and debugging.</p>
+<p><strong>Operating systems and platforms.</strong> Linux (Debian,
+Ubuntu, Mint, Red Hat) on workstations and datacentre servers; L4
+microkernels, MbedOS, RTOS internals and porting; Linux kernel, memory
+management and device drivers; ZFS and zfs-root workstations and storage
+servers; IPMI, RAID, GPU servers; Secure build systems and
+export-controlled software licence servers.</p>
+<p><strong>Languages and toolchains.</strong> C, GCC/G++, GDB and the
+GNU toolchain, native and cross-compiled; GCC backend and cross-compiler
+development; Buildroot, Android SDK, MbedOS SDK, Edge Impulse; Python,
+Bash, Git, SSH, GPG, tmux/screen.</p>
+<p><strong>Architectures and hardware.</strong> ARM and RISC-V
+platforms; board bring-up and JTAG; FPGA boards, peripherals, memory
+maps and I/O devices; Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and
+storage systems; AI accelerators and video-compression hardware.</p>
+<p><strong>Methods.</strong> Real-time scheduling and temporal
+reflection; Performance analysis and system tracing; Debugging poorly
+documented hardware and software; Technical leadership, procurement and
+project delivery.</p>
+<h2 id="selected-projects">Selected projects</h2>
+<p><strong>Full software stack for the ECS-DoT ultra-low-power RISC-V AI
+SoC</strong></p>
+<p><em>2024 – present · NTU, then EMASS (an NTU/A*STAR spin-off) from
+06/2025</em></p>
+<p>Research and develop the device drivers, RTOS, SDK and toolchains
+needed to compile, optimise and run AI applications on ECS-DoT, a custom
+ultra-low-power SoC with a RISC-V core and dedicated hardware
+accelerators, designed and fabricated by the team.</p>
+<p><strong>Impact:</strong> Enables AI workloads on the ECS-DoT SoC;
+builds on the AI-accelerator driver and RTOS work done at A*STAR
+I²R.</p>
+<p><strong>MbedOS and SDK port to the ECS-DoT RISC-V SoC</strong></p>
+<p><em>2020 – 2024 · A*STAR I²R / NTU · ECS-DoT Edge SoC with AI
+acceleration</em></p>
+<p>Ported the ARM MbedOS 5.12.4 RTOS and its SDK to the ECS-DoT SoC,
+covering a different CPU core, instruction set, peripherals, memory map
+and I/O devices. Both the original and the target platforms were poorly
+documented and buggy, so the work was a complex trial-and-error effort
+with the GCC toolchain and GDB.</p>
+<p><strong>Impact:</strong> Delivered a working RTOS port and
+board-support package; technology disclosure SWIP-PMEP-2022-31, licensed
+to an A*STAR spin-off.</p>
+<p><strong>AI accelerator Linux kernel driver port to MbedOS on
+RISC-V</strong></p>
+<p><em>2022 – 2023 · A*STAR I²R · ECS-DoT</em></p>
+<p>Ported the AI accelerator’s ARM Linux kernel driver to MbedOS on the
+ECS-DoT RISC-V CPU, adapting the driver to a new operating system,
+memory map and device model.</p>
+<p><strong>Impact:</strong> Technology disclosure SWIP-PNVD-2022-33,
+licensed to an A*STAR spin-off.</p>
+<p><strong>Real-time extensions and reflective scheduling for the L4
+microkernel</strong></p>
+<p><em>2004 – 2007 · NICTA · ERTOS Programme</em></p>
+<p>Analysed the real-time behaviour of general-purpose L4 microkernels,
+identified the architectural obstacles to predictable scheduling, and
+designed and implemented a reflective real-time scheduler that lets a
+system observe and control its own temporal behaviour.</p>
+<p><strong>Impact:</strong> Published at IEEE RTSS 2006 and OSPERT
+2006/2007 and in the EURASIP Journal on Embedded Systems; the work
+influenced the real-time features of the commercial OKL4
+microkernel.</p>
+<p><strong>Linux memory-management extensions for non-volatile
+DIMMs</strong></p>
+<p><em>2015 · A*STAR DSI · CERN OpenLab collaboration</em></p>
+<p>Extended Linux memory management to support non-volatile DIMMs,
+allowing persistent data to be placed directly in main memory and
+processed at memory speed.</p>
+<p><strong>Impact:</strong> Procured an invitation to collaborate with
+CERN OpenLab and an invited talk at CERN OpenLab 2015.</p>
+<p><strong>GCC backend for a custom 16-bit microcontroller</strong></p>
+<p><em>2009 – 2010 · Micron Italy (formerly STMicroelectronics) ·
+Università di Milano-Bicocca</em></p>
+<p>Ported the GNU GCC C compiler to a custom, non-standard 16-bit
+microcontroller managing embedded NAND/NOR phase-change memories under
+hard real-time constraints and security requirements. The target was
+poorly documented, requiring a new backend and extensive debugging with
+GDB.</p>
+<p><strong>Impact:</strong> Delivered under a Micron R&amp;D contract;
+the compiler supported devices deployed in high volume.</p>
+<p><strong>Active Discs Clusters Performance Study (ADCPS)</strong></p>
+<p><em>2017 – 2019 · A*STAR DSI, then I²R · funded by Seagate
+USA</em></p>
+<p>Industry-funded performance study of active disc clusters, covering
+workload characterisation, measurement and analysis.</p>
+<p><strong>Impact:</strong> Delivered a performance study to Seagate
+USA.</p>
+<p><strong>EU ENIAC SMART and TOISE projects</strong></p>
+<p><em>2009 – 2013 · Università di Milano-Bicocca · Micron Italy and
+STMicroelectronics</em></p>
+<p>Principal Investigator and technical lead for UNIMIB in two
+three-year EU ENIAC projects: SMART (techniques and tools for advanced
+real-time embedded firmware, €302,400) and TOISE (trusted computing for
+European embedded systems, €556,000). Responsible for planning, budget,
+recruiting research engineers and post-docs, and scientific and
+technical delivery.</p>
+<p><strong>Impact:</strong> Funded a research fellowship and a team of
+post-docs and research engineers; produced tools and techniques for
+advanced embedded firmware.</p>
+<h2 id="experience">Experience</h2>
+<p><strong>Senior Software Engineer</strong> — EMASS (an NTU/A*STAR
+spin-off)</p>
+<p><em>06/2025 – present · Singapore</em></p>
+<p>End-to-end software for ECS-DoT, an ultra-low-power AI SoC with a
+RISC-V core and dedicated hardware accelerators. Research and
+development of the full stack of software and tools — device drivers,
+RTOS, SDK and toolchains — to compile, optimise and run AI applications
+on a custom SoC designed and fabricated by the team.</p>
+<p><strong>Research Fellow</strong> — School of Computer Science and
+Engineering, Nanyang Technological University (NTU)</p>
+<p><em>04/2024 – 05/2025 · Singapore</em></p>
+<p>End-to-end software for ECS-DoT, an ultra-low-power AI SoC with a
+RISC-V core and dedicated hardware accelerators: device drivers, RTOS,
+SDK and toolchains.</p>
+<p><strong>Senior Scientist II</strong> — A*STAR Institute for Infocomm
+Research (I²R)</p>
+<p><em>06/2018 – 09/2023 · Singapore</em></p>
+<p>Embedded real-time operating systems, SDKs, firmware and drivers for
+a RISC-V-based SoC customised with a deep-learning accelerator for
+ultra-low-power edge-IoT applications.</p>
+<p><strong>Scientist II</strong> — A*STAR Data Storage Institute
+(DSI)</p>
+<p><em>10/2012 – 05/2018 · Singapore</em></p>
+<p>Systems software and programming-toolchain research for
+next-generation solid-state storage and non-volatile memory.</p>
+<p><strong>Research Fellow</strong> — Dipartimento di Informatica,
+Sistemistica e Comunicazione (DISCo), Università di Milano-Bicocca</p>
+<p><em>04/2007 – 09/2012 · Milan, Italy</em></p>
+<p>Research and teaching in real-time embedded systems, compiler
+retargeting and toolchains, and next-generation non-volatile storage,
+with projects funded by industry contracts and European research
+grants.</p>
+<p><strong>Researcher, Embedded, Real-Time and Operating Systems (ERTOS)
+Programme</strong> — NICTA (National ICT Australia, now Data61/CSIRO),
+Sydney</p>
+<p><em>04/2004 – 03/2007 · Australia</em></p>
+<p>Real-time and operating-systems research on the L4 microkernel.</p>
+<p><strong>Linux Kernel Engineer</strong> — Comerson s.r.l., Milan</p>
+<p><em>2002 – 2004 · Italy</em></p>
+<p>Smart video camera with TCP/IP support — at a time when other digital
+webcams were serial or USB.</p>
+<p><strong>Software Engineer</strong> — Metamatica, Milan</p>
+<p><em>2000 – 2001 · Italy</em></p>
+<p>Web-based lottery game.</p>
+<p><strong>Embedded Software Engineer</strong> — CD Express</p>
+<p><em>1996 – 1997 · Italy</em></p>
+<p>MPEG decoder for the Commodore CD-32.</p>
+<p><strong>Software Engineer and Independent Consultant</strong> —
+Self-employed</p>
+<p><em>01/1990 – 01/2002 · Italy</em></p>
+<p>Consulting on embedded real-time systems while attending
+university.</p>
+<h2 id="patents-and-technology-disclosures">Patents and technology
+disclosures</h2>
+<p><strong>SWIP-PMEP-2022-31</strong> — Porting of MbedOS 5.12.4 to the
+ECS-DoT SoC and RISC-V CPU. Filed 2023-03-10. Review completed 27 April
+2023. Licensed to an A*STAR spin-off.</p>
+<p><strong>SWIP-PNVD-2022-33</strong> — Porting of the AI accelerator
+ARM Linux kernel driver for MbedOS on the ECS-DoT RISC-V CPU. Filed
+2023-03-10. Review scheduled 2 May 2023. Licensed to an A*STAR
+spin-off.</p>
+<p><strong>SWIP-TLCN-2022-32</strong> — Tracing Linux compiler and
+kernel driver for an AI accelerator. Filed 2023-03-10. Review completed
+21 April 2023. Expected to be licensed to the same spin-off.</p>
+<p><strong>SWIP-EIFE-2022-34</strong> — Edge Impulse firmware for
+ECS-DoT. Filed 2023-03-10. Review scheduled July 2023. Expected to be
+licensed to the same spin-off.</p>
+<p><strong>TD2022128 / I2R/Z/13931</strong> — Edge SoC with AI
+acceleration. Filed 2023-01-12. Pending director approval. Licensed to
+an A*STAR spin-off. Creators: M. M. Sabry Aly (NTU), A. Zaky, X. Qu, J.
+Lin, S. Ruocco, Z. Wang.</p>
+<h2 id="publications">Publications</h2>
+<p><em>Selected publications.</em></p>
+<ol type="1">
+<li><p>Q. Trinh, S. Ruocco, M. Alioto, “Time-Based Sensing for
+Reference-Less and Robust Read in STT-MRAM Memories,” <em>IEEE
+Transactions on Circuits and Systems I: Regular Papers</em>,
+65(10):3338–3348. <a href="https://doi.org/10.1109/TCSI.2018.2828611">DOI</a></p></li>
+<li><p>Q. Trinh, S. Ruocco, M. Alioto, “Novel Time-Based Sensing Scheme
+for STT-MRAMs,” <em>IEEE International Symposium on Circuits and Systems
+(ISCAS)</em>, Florence, Italy, 1–5. <a href="https://doi.org/10.1109/ISCAS.2018.8350966">DOI</a></p></li>
+<li><p>S. Ruocco, D.-K. Le, “Efficient Persistence of Financial
+Transactions in NVM-based Cloud Data Centers,” <em>International
+Conference on Cloud Computing Research and Innovation (ICCCRI)</em>,
+25–36. <a href="https://doi.org/10.1109/ICCCRI.2015.29">DOI</a></p></li>
+<li><p>S. Ruocco, “A Real-Time Programmer’s Tour of General-Purpose L4
+Microkernels,” <em>EURASIP Journal on Embedded Systems</em>, 2008:1–14.
+<a href="https://doi.org/10.1155/2008/234710">DOI</a></p></li>
+<li><p>S. Ruocco, “User-Level Fine-Grained Adaptive Real-Time Scheduling
+via Temporal Reflection,” <em>27th IEEE Real-Time Systems Symposium
+(RTSS)</em>, Rio de Janeiro, Brazil, 246–256. <a href="https://doi.org/10.1109/RTSS.2006.50">DOI</a></p></li>
+</ol>
+<h2 id="education">Education</h2>
+<p><strong>2004 — PhD in Computer Science</strong><br />
+<em>Università degli Studi di Milano, Italy — Mathematics, Statistics,
+Computational Sciences and Computer Science Research</em></p>
+<p>Thesis: <em>Temporal Reflection</em>. Doctoral scholarship,
+2000–2004. In Italy, PhD degrees are pass/no-pass and are not
+graded.</p>
+<p><strong>1999 — Master of Science in Computer Science</strong><br />
+<em>Università degli Studi di Milano, Italy — 110/110 cum laude</em></p>
+<p>Thesis: <em>HyperReal: a paradigm for the design and synthesis of
+hard real-time control systems</em>.</p>
+</body>
+</html>

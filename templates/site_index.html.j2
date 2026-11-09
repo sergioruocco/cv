@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ profile.short_name }} — Curriculum Vitae</title>
+  <meta name="description" content="Curriculum vitae of {{ profile.name }}, {{ tagline }}.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <h1>{{ profile.name }}</h1>
+      <p class="tagline">{{ tagline }}</p>
+      <p class="affiliation">{{ profile.affiliation }}</p>
+      <div class="contact">
+        {% if profile.phone %}<span>{{ profile.phone }}</span>{% endif %}
+        {% if profile.nationality %}<span>Nationality: {{ profile.nationality }}</span>{% endif %}
+        {% for email in profile.emails %}
+        <a href="mailto:{{ email.address }}">{{ email.label }}</a>
+        {% endfor %}
+        {% for link in profile.links %}
+        <a href="{{ link.url }}">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="#about">About</a>
+      <a href="#interests">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#cv">CV</a>
+      <a href="publications.html">All publications</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <p class="lead">{{ bio }}</p>
+    </section>
+
+    <section id="interests">
+      <h2>Research interests</h2>
+      <ul class="chips">
+        {% for item in interests %}
+        <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Selected publications</h2>
+      <ul class="pub-list">
+        {% for pub in selected %}
+        <li class="pub">
+          <div class="pub-year">{{ pub.year }}</div>
+          <div class="pub-body">
+            <div class="pub-title">{{ pub.title }}</div>
+            <div class="pub-authors">{{ pub.authors }}</div>
+            <div class="pub-venue">{{ pub.venue }}{% if pub.pages %}, {{ pub.pages }}{% endif %}</div>
+            <div class="pub-meta">
+              {% if citation_label(pub) %}<span>{{ citation_label(pub) }}</span>{% endif %}
+              {% if pub_url(pub) %}<a href="{{ pub_url(pub) }}">{{ pub_link_label(pub) }}</a>{% endif %}
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <a class="more" href="publications.html">All publications →</a>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        {% for job in experience %}
+        <div class="timeline-item">
+          <div class="timeline-period">{{ job.period }}</div>
+          <div class="timeline-body">
+            <h3>{{ job.role }}</h3>
+            <p class="org">{{ job.org }}</p>
+            {% if job.summary %}<p>{{ job.summary }}</p>{% endif %}
+            {% if job.highlights %}
+            <ul>
+              {% for highlight in job.highlights[:3] %}
+              <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum vitae</h2>
+      <div class="downloads">
+        {% for item in downloads %}
+        <div class="download">
+          <h3>{{ item.label }}</h3>
+          <p>PDF for reading and printing; DOCX for editing and applicant-tracking systems.</p>
+          <div class="buttons">
+            <a class="button" href="{{ item.pdf }}">Download PDF</a>
+            <a class="button ghost" href="{{ item.docx }}">Download DOCX</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© {{ today[:4] }} {{ profile.short_name }}. Last updated {{ today }}.</span>
+      <span>Citation counts: OpenAlex. Live counts: {% if scholar %}<a href="{{ scholar }}">Google Scholar</a>{% else %}Google Scholar{% endif %}.</span>
+    </div>
+  </footer>
+</body>
+</html>

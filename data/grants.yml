@@ -1,0 +1,49 @@
+- name: "ENIAC TOISE — Trusted Computing for European Embedded Systems"
+  period: "01/2011 – 12/2013"
+  amount: "€556,000"
+  role: "Principal Investigator and technical lead for UNIMIB"
+  partners: "Micron Italy, STMicroelectronics and European consortium partners"
+  description: >-
+    EU ENIAC Joint Undertaking project on trusted computing for embedded
+    systems, including non-volatile-memory security.
+  url: "https://cordis.europa.eu/project/rcn/201953/factsheet/en"
+
+- name: "ENIAC SMART — Techniques and Tools for Advanced Real-Time Embedded Firmware"
+  period: "01/2010 – 12/2012"
+  amount: "€302,400"
+  role: "Principal Investigator and technical lead for UNIMIB"
+  partners: "Micron Italy, STMicroelectronics and European consortium partners"
+  description: >-
+    EU ENIAC Joint Undertaking project on techniques and tools for advanced
+    real-time embedded firmware design and development.
+  url: "https://cordis.europa.eu/project/rcn/201942/factsheet/en"
+
+- name: "Micron R&D contracts"
+  period: "2009 – 2014"
+  amount: ""
+  role: "Principal investigator and lead engineer"
+  partners: "Micron Italy (formerly STMicroelectronics)"
+  description: >-
+    Two consulting research contracts: a GCC port to a custom 16-bit
+    microcontroller for phase-change memory (2009–2010), and software
+    architectures for non-volatile storage (2012–2014).
+  url: ""
+
+- name: "Active Discs Clusters Performance Study (ADCPS)"
+  period: "01/2017 – 05/2019"
+  amount: ""
+  role: "Project lead"
+  partners: "Seagate USA"
+  description: >-
+    Industry-funded performance study of active disc clusters.
+  url: ""
+
+- name: "CERN OpenLab collaboration"
+  period: "2015"
+  amount: ""
+  role: "Invited collaborator"
+  partners: "CERN OpenLab"
+  description: >-
+    Collaboration on non-volatile memory and persistent data in main memory,
+    following the Linux memory-management work at A*STAR DSI.
+  url: "https://indico.cern.ch/event/381083/timetable/#20150610"

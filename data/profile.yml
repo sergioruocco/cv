@@ -1,0 +1,34 @@
+# Identity and contact details.
+# Edit this file once; every profile and the website read from it.
+
+name: "Dr. Sergio Ruocco"
+short_name: "Sergio Ruocco"
+affiliation: "EMASS (an NTU/A*STAR spin-off), Singapore"
+
+# Home address intentionally omitted for privacy.
+
+# Phone number intentionally omitted to avoid spam and scam calls.
+
+emails:
+  - address: "sergio.ruocco@gmail.com"
+    label: "sergio.ruocco@gmail.com"
+    primary: true
+  - address: "sergiusr@protonmail.com"
+    label: "sergiusr@protonmail.com (secure)"
+    primary: false
+
+# Shown in the CV headers (the website itself does not link to itself).
+website: "https://sruocco-i2r.github.io/cv/"
+
+links:
+  - label: "Google Scholar"
+    url: "https://scholar.google.com/citations?user=q1574qIAAAAJ"
+  - label: "LinkedIn"
+    url: "https://www.linkedin.com/in/sergio-ruocco/"
+  # Add these when available; the CV and site will pick them up automatically.
+  # - label: "ORCID"
+  #   url: "https://orcid.org/0000-0000-0000-0000"
+  # - label: "GitHub"
+  #   url: "https://github.com/..."
+
+nationality: "Italian"

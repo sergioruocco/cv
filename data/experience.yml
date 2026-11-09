@@ -1,0 +1,115 @@
+- period: "06/2025 – present"
+  role: "Senior Software Engineer"
+  org: "EMASS (an NTU/A*STAR spin-off)"
+  location: "Singapore"
+  summary: >-
+    End-to-end software for ECS-DoT, an ultra-low-power AI SoC with a RISC-V core
+    and dedicated hardware accelerators. Research and development of the full stack
+    of software and tools — device drivers, RTOS, SDK and toolchains — to
+    compile, optimise and run AI applications on a custom SoC designed and
+    fabricated by the team.
+  highlights:
+    - "Builds the device-driver, RTOS, SDK and toolchain layers for the ECS-DoT ultra-low-power AI SoC."
+    - "Targets a RISC-V core with dedicated deep-learning accelerators for edge IoT applications."
+  tags: [academic, industry, consulting]
+
+- period: "04/2024 – 05/2025"
+  role: "Research Fellow"
+  org: "School of Computer Science and Engineering, Nanyang Technological University (NTU)"
+  location: "Singapore"
+  summary: >-
+    End-to-end software for ECS-DoT, an ultra-low-power AI SoC with a RISC-V core
+    and dedicated hardware accelerators: device drivers, RTOS, SDK and toolchains.
+  highlights:
+    - "Continued the ECS-DoT AI-accelerator software work that seeded the EMASS spin-off."
+  tags: [academic, industry, consulting]
+
+- period: "06/2018 – 09/2023"
+  role: "Senior Scientist II"
+  org: "A*STAR Institute for Infocomm Research (I²R)"
+  location: "Singapore"
+  summary: >-
+    Embedded real-time operating systems, SDKs, firmware and drivers for a
+    RISC-V-based SoC customised with a deep-learning accelerator for
+    ultra-low-power edge-IoT applications.
+  highlights:
+    - "Delivered the port of ARM MbedOS 5.12.4 and its SDK to the ECS-DoT RISC-V SoC, including CPU core, peripherals, memory map and I/O devices."
+    - "Ported the AI accelerator's ARM Linux kernel driver to MbedOS on the ECS-DoT RISC-V CPU, and traced the Linux compiler and kernel driver for the accelerator."
+    - "Contributed to the Edge SoC with AI acceleration technology disclosure (TD2022128) and four software/technology disclosures licensed to an A*STAR spin-off."
+    - "Completed the Active Discs Clusters Performance Study (ADCPS) for Seagate USA (2017–2019)."
+  tags: [academic, industry, consulting]
+
+- period: "10/2012 – 05/2018"
+  role: "Scientist II"
+  org: "A*STAR Data Storage Institute (DSI)"
+  location: "Singapore"
+  summary: >-
+    Systems software and programming-toolchain research for next-generation
+    solid-state storage and non-volatile memory.
+  highlights:
+    - "Extended Linux memory management for non-volatile DIMMs; the work led to an invited collaboration with CERN OpenLab and a talk at CERN OpenLab 2015."
+    - "Started the Active Discs Clusters Performance Study (ADCPS) for Seagate USA."
+  tags: [academic, industry, consulting]
+
+- period: "04/2007 – 09/2012"
+  role: "Research Fellow"
+  org: "Dipartimento di Informatica, Sistemistica e Comunicazione (DISCo), Università di Milano-Bicocca"
+  location: "Milan, Italy"
+  summary: >-
+    Research and teaching in real-time embedded systems, compiler retargeting and
+    toolchains, and next-generation non-volatile storage, with projects funded by
+    industry contracts and European research grants.
+  highlights:
+    - "Principal Investigator and technical lead for UNIMIB in EU ENIAC SMART (€302,400) and TOISE (€556,000), with Micron Italy and STMicroelectronics."
+    - "Secured two Micron R&D contracts, including the port of GCC to a custom 16-bit microcontroller for phase-change memory chips."
+    - "Project leader of IMUD/Cyber-ADI, a long-running, low-power wireless real-time inertial monitoring device for wireless sensor-network research."
+    - "Taught graduate Computer Architecture and undergraduate Real-time Embedded Systems."
+  tags: [academic, industry, consulting]
+
+- period: "04/2004 – 03/2007"
+  role: "Researcher, Embedded, Real-Time and Operating Systems (ERTOS) Programme"
+  org: "NICTA (National ICT Australia, now Data61/CSIRO), Sydney"
+  location: "Australia"
+  summary: >-
+    Real-time and operating-systems research on the L4 microkernel.
+  highlights:
+    - "Analysed and improved the real-time properties of the general-purpose L4 microkernel."
+    - "Designed and implemented a reflective real-time scheduling framework (RTSS 2006; OSPERT 2006/2007; EURASIP JES 2008)."
+    - "Visiting Fellow and conjoint lecturer at the University of New South Wales (2004–2007)."
+  tags: [academic, industry, consulting]
+
+- period: "2002 – 2004"
+  role: "Linux Kernel Engineer"
+  org: "Comerson s.r.l., Milan"
+  location: "Italy"
+  summary: >-
+    Smart video camera with TCP/IP support — at a time when other digital
+    webcams were serial or USB.
+  highlights:
+    - "Wrote the Linux device driver and network interfacing for NetCom, a custom wavelet-based real-time video acquisition and compression board; the product shipped and remained on sale for years."
+  tags: [industry, consulting]
+
+- period: "2000 – 2001"
+  role: "Software Engineer"
+  org: "Metamatica, Milan"
+  location: "Italy"
+  summary: "Web-based lottery game."
+  highlights: []
+  tags: [consulting]
+
+- period: "1996 – 1997"
+  role: "Embedded Software Engineer"
+  org: "CD Express"
+  location: "Italy"
+  summary: "MPEG decoder for the Commodore CD-32."
+  highlights: []
+  tags: [consulting]
+
+- period: "01/1990 – 01/2002"
+  role: "Software Engineer and Independent Consultant"
+  org: "Self-employed"
+  location: "Italy"
+  summary: >-
+    Consulting on embedded real-time systems while attending university.
+  highlights: []
+  tags: [consulting]

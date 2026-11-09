@@ -1,0 +1,56 @@
+# Audience-specific summaries. Keep the same facts; change the emphasis.
+
+short: >-
+  Dr. Sergio Ruocco is a Senior Software Engineer at EMASS, an NTU/A*STAR
+  spin-off in Singapore, where he builds the software stack for ECS-DoT, an
+  ultra-low-power AI SoC with a RISC-V core and dedicated hardware
+  accelerators. He has 25 years of academic and industrial R&D in embedded and
+  real-time systems, operating-system kernels and compilers. He holds a Master's
+  degree cum laude and a PhD in Computer Science from the Università degli Studi
+  di Milano, and has worked at NTU, A*STAR, the Università di Milano-Bicocca and
+  NICTA/Data61 in Sydney. His projects include real-time extensions to the L4
+  microkernel, the port of ARM MbedOS and its SDK to the ECS-DoT RISC-V SoC,
+  Linux memory-management extensions for non-volatile DIMMs (which led to a CERN
+  OpenLab collaboration), Linux and MbedOS drivers for video and deep-learning
+  accelerators, and the port of GCC to a custom 16-bit microcontroller for
+  NAND/NOR non-volatile memory under hard real-time constraints.
+
+academic: >-
+  Dr. Ruocco's research concerns the analysis, design and implementation of
+  time-sensitive and time-aware computer systems. His PhD introduced temporal
+  reflection, a class of computational reflection through which a system can
+  represent, observe and control its own temporal behaviour; he designed and
+  implemented a reflective real-time scheduler for the L4 microkernel. At NICTA
+  he analysed and improved the real-time properties of general-purpose L4
+  microkernels. At A*STAR and NTU he worked on systems software and programming
+  toolchains for non-volatile and persistent memory, storage systems, RISC-V
+  platforms and AI accelerators, including the port of MbedOS and Linux device
+  drivers to the ECS-DoT SoC and its AI accelerator. He is currently a
+  Senior Software Engineer at EMASS, building the full software stack for the
+  ECS-DoT ultra-low-power AI SoC. His work has appeared at IEEE RTSS, ISCAS,
+  TCAS-I and JETCAS and in the EURASIP Journal on Embedded Systems, and has led
+  to a US patent and several technology disclosures licensed to an A*STAR spin-off.
+
+industry: >-
+  Hands-on systems R&D leader with 25 years of experience spanning operating
+  systems, compilers and embedded platforms. Dr. Ruocco is currently a Senior
+  Software Engineer at EMASS, where he builds the device drivers, RTOS, SDK and
+  toolchains for the ECS-DoT ultra-low-power RISC-V AI SoC. He has a track
+  record of taking poorly documented hardware and turning it into working systems: GCC
+  backends, Linux kernel and driver code, RTOS ports, board-support packages and
+  performance-analysis tools. He is comfortable from board bring-up and JTAG to
+  kernel memory management and compiler internals, and has led industry projects
+  for Seagate and Micron as well as EU-funded R&D with STMicroelectronics. He
+  combines deep technical work with project leadership, procurement and
+  end-to-end delivery.
+
+consulting: >-
+  Dr. Sergio Ruocco is an embedded-systems and toolchain consultant with 25 years
+  of experience in Linux kernel and driver development, real-time operating
+  systems, compiler toolchains, and non-volatile and persistent memory. He helps
+  teams de-risk unfamiliar hardware and software: porting operating systems and
+  SDKs to new SoCs, writing and debugging kernel drivers, building GCC backends,
+  improving real-time behaviour, and analysing system performance. He is
+  currently a Senior Software Engineer at EMASS, an NTU/A*STAR spin-off building
+  the ECS-DoT ultra-low-power RISC-V AI SoC. His clients have included Seagate
+  (USA) and Micron Italy, and he has led EU ENIAC projects with STMicroelectronics.

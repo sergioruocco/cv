@@ -1,0 +1,167 @@
+- id: emass-ai-soc
+  period: "2024 – present"
+  title: "Full software stack for the ECS-DoT ultra-low-power RISC-V AI SoC"
+  context: "NTU, then EMASS (an NTU/A*STAR spin-off) from 06/2025"
+  description: >-
+    Research and develop the device drivers, RTOS, SDK and toolchains needed to
+    compile, optimise and run AI applications on ECS-DoT, a custom ultra-low-power
+    SoC with a RISC-V core and dedicated hardware accelerators, designed and
+    fabricated by the team.
+  impact: >-
+    Enables AI workloads on the ECS-DoT SoC; builds on the AI-accelerator driver
+    and RTOS work done at A*STAR I²R.
+  featured: true
+  tags: [academic, industry, consulting]
+
+- id: mbedos-ecsdot
+  period: "2020 – 2024"
+  title: "MbedOS and SDK port to the ECS-DoT RISC-V SoC"
+  context: "A*STAR I²R / NTU · ECS-DoT Edge SoC with AI acceleration"
+  description: >-
+    Ported the ARM MbedOS 5.12.4 RTOS and its SDK to the ECS-DoT SoC,
+    covering a different CPU core, instruction set, peripherals, memory map and
+    I/O devices. Both the original and the target platforms were poorly
+    documented and buggy, so the work was a complex trial-and-error effort with
+    the GCC toolchain and GDB.
+  impact: >-
+    Delivered a working RTOS port and board-support package; technology
+    disclosure SWIP-PMEP-2022-31, licensed to an A*STAR spin-off.
+  featured: true
+  tags: [industry, consulting, academic]
+
+- id: ai-accelerator-driver
+  period: "2022 – 2023"
+  title: "AI accelerator Linux kernel driver port to MbedOS on RISC-V"
+  context: "A*STAR I²R · ECS-DoT"
+  description: >-
+    Ported the AI accelerator's ARM Linux kernel driver to MbedOS on the ECS-DoT
+    RISC-V CPU, adapting the driver to a new operating system, memory map and
+    device model.
+  impact: >-
+    Technology disclosure SWIP-PNVD-2022-33, licensed to an A*STAR spin-off.
+  featured: true
+  tags: [industry, consulting, academic]
+
+- id: ai-accelerator-tracing
+  period: "2022 – 2023"
+  title: "Tracing the Linux compiler and kernel driver for an AI accelerator"
+  context: "A*STAR I²R · ECS-DoT"
+  description: >-
+    Built tracing and analysis tooling for the Linux compiler and kernel driver
+    of the AI accelerator.
+  impact: >-
+    Technology disclosure SWIP-TLCN-2022-32.
+  featured: false
+  tags: [industry, consulting, academic]
+
+- id: edge-impulse
+  period: "2022 – 2023"
+  title: "Edge Impulse firmware for ECS-DoT"
+  context: "A*STAR I²R · ECS-DoT"
+  description: >-
+    Integrated Edge Impulse firmware with the ECS-DoT platform for on-device
+    machine learning.
+  impact: >-
+    Technology disclosure SWIP-EIFE-2022-34.
+  featured: false
+  tags: [industry, consulting, academic]
+
+- id: l4-real-time
+  period: "2004 – 2007"
+  title: "Real-time extensions and reflective scheduling for the L4 microkernel"
+  context: "NICTA · ERTOS Programme"
+  description: >-
+    Analysed the real-time behaviour of general-purpose L4 microkernels,
+    identified the architectural obstacles to predictable scheduling, and
+    designed and implemented a reflective real-time scheduler that lets a system
+    observe and control its own temporal behaviour.
+  impact: >-
+    Published at IEEE RTSS 2006 and OSPERT 2006/2007 and in the EURASIP Journal
+    on Embedded Systems; the work influenced the real-time features of the
+    commercial OKL4 microkernel.
+  featured: true
+  tags: [academic, industry, consulting]
+
+- id: nvm-linux
+  period: "2015"
+  title: "Linux memory-management extensions for non-volatile DIMMs"
+  context: "A*STAR DSI · CERN OpenLab collaboration"
+  description: >-
+    Extended Linux memory management to support non-volatile DIMMs, allowing
+    persistent data to be placed directly in main memory and processed at memory
+    speed.
+  impact: >-
+    Procured an invitation to collaborate with CERN OpenLab and an invited talk
+    at CERN OpenLab 2015.
+  featured: true
+  tags: [academic, industry, consulting]
+
+- id: gcc-16bit
+  period: "2009 – 2010"
+  title: "GCC backend for a custom 16-bit microcontroller"
+  context: "Micron Italy (formerly STMicroelectronics) · Università di Milano-Bicocca"
+  description: >-
+    Ported the GNU GCC C compiler to a custom, non-standard 16-bit
+    microcontroller managing embedded NAND/NOR phase-change memories under hard
+    real-time constraints and security requirements. The target was poorly
+    documented, requiring a new backend and extensive debugging with GDB.
+  impact: >-
+    Delivered under a Micron R&D contract; the compiler supported devices
+    deployed in high volume.
+  featured: true
+  tags: [industry, consulting, academic]
+
+- id: adcps
+  period: "2017 – 2019"
+  title: "Active Discs Clusters Performance Study (ADCPS)"
+  context: "A*STAR DSI, then I²R · funded by Seagate USA"
+  description: >-
+    Industry-funded performance study of active disc clusters, covering
+    workload characterisation, measurement and analysis.
+  impact: >-
+    Delivered a performance study to Seagate USA.
+  featured: true
+  tags: [industry, consulting]
+
+- id: eniac
+  period: "2009 – 2013"
+  title: "EU ENIAC SMART and TOISE projects"
+  context: "Università di Milano-Bicocca · Micron Italy and STMicroelectronics"
+  description: >-
+    Principal Investigator and technical lead for UNIMIB in two three-year EU
+    ENIAC projects: SMART (techniques and tools for advanced real-time embedded
+    firmware, €302,400) and TOISE (trusted computing for European embedded
+    systems, €556,000). Responsible for planning, budget, recruiting research
+    engineers and post-docs, and scientific and technical delivery.
+  impact: >-
+    Funded a research fellowship and a team of post-docs and research engineers;
+    produced tools and techniques for advanced embedded firmware.
+  featured: true
+  tags: [academic, industry, consulting]
+
+- id: imud
+  period: "2007 – 2008"
+  title: "IMUD / Cyber-ADI wireless inertial monitoring device"
+  context: "Università di Milano-Bicocca · NOMADIS Lab"
+  description: >-
+    Designed and implemented the hardware and software of a long-running,
+    low-power, wireless real-time inertial monitoring device for wireless
+    sensor-network research, including bare-metal assembly and C for
+    microcontrollers, sensors, peripherals and WSN interfaces.
+  impact: >-
+    Used across a number of wireless sensor-network research projects.
+  featured: false
+  tags: [academic, industry, consulting]
+
+- id: netcom
+  period: "2001 – 2002"
+  title: "NetCom real-time video acquisition and compression board"
+  context: "Comerson srl, Milan"
+  description: >-
+    Designed and implemented the Linux device driver and network interfacing for
+    a custom wavelet-based real-time video acquisition and compression board,
+    including hardware debugging of a prototype board designed in-house.
+  impact: >-
+    NetCom became a successful product and was still sold years later.
+  featured: false
+  tags: [industry, consulting]

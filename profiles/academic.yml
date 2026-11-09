@@ -1,0 +1,26 @@
+name: academic
+label: "Academic and research CV"
+filename: "Sergio_Ruocco_CV_academic"
+tagline: "Senior Software Engineer, EMASS · Embedded and real-time systems, compilers"
+bio: academic
+summary_heading: "Research profile"
+sections:
+  - research_interests
+  - education
+  - experience
+  - grants
+  - projects
+  - publications
+  - patents
+  - talks
+  - teaching
+  - supervision
+  - service
+  - skills
+options:
+  experience_highlights: true
+  projects: featured
+  publications: full
+  citation_source: openalex
+  patents: all
+  teaching: full
