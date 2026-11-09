@@ -9,7 +9,7 @@ groups:
   - name: "Operating systems and platforms"
     items:
       - "Linux (Debian, Ubuntu, Mint, Red Hat) on workstations and datacentre servers"
-      - "L4 microkernels, MbedOS, RTOS internals and porting"
+      - "L4 microkernels, MbedOS, Zephyr, RTOS internals and porting"
       - "Linux kernel, memory management and device drivers"
       - "ZFS and zfs-root workstations and storage servers; IPMI, RAID, GPU servers"
       - "Secure build systems and export-controlled software licence servers"

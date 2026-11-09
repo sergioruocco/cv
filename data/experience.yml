@@ -9,8 +9,8 @@
     compile, optimise and run AI applications on a custom SoC designed and
     fabricated by the team.
   highlights:
-    - "Builds the device-driver, RTOS, SDK and toolchain layers for the ECS-DoT ultra-low-power AI SoC."
-    - "Targets a RISC-V core with dedicated deep-learning accelerators for edge IoT applications."
+    - "Develops and ports the device drivers, bare-metal and Zephyr RTOS, SDK and GCC toolchain components of the ECS-DoT ultra-low-power AI SoC software stack."
+    - "Targets a RISC-V core with dedicated deep-learning accelerators for edge AI IoT applications."
   tags: [academic, industry, consulting]
 
 - period: "04/2024 – 05/2025"
@@ -46,7 +46,7 @@
     Systems software and programming-toolchain research for next-generation
     solid-state storage and non-volatile memory.
   highlights:
-    - "Extended Linux memory management for non-volatile DIMMs; the work led to an invited collaboration with CERN OpenLab and a talk at CERN OpenLab 2015."
+    - "Extended Linux memory management to support non-volatile DIMMs; the work led to an invited collaboration with CERN OpenLab and a talk at CERN OpenLab 2015."
     - "Led and delivered the Active Discs Clusters Performance Study (ADCPS) for Seagate USA (2017–2019), completed after the move to I²R."
   tags: [academic, industry, consulting]
 
