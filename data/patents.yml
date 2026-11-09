@@ -7,30 +7,35 @@ patents:
     url: "https://patents.google.com/patent/US20190206469A1/en"
     note: "Managed by the NUS IP office."
 
+# Shown once, at the start of the technology-disclosure list.
+disclosures_note: >-
+  EMASS (Embedded A.I. Systems Pte Ltd) is a Singaporean fabless semiconductor
+  company founded in 2020 as a spin-off from NTU Singapore and A*STAR research, and
+  acquired by Nanoveu Ltd (ASX: NVU) in March 2025.
+
 disclosures:
   - id: "SWIP-PMEP-2022-31"
     title: "Porting of MbedOS 5.12.4 to the ECS-DoT SoC and RISC-V CPU"
     filed: "2023-03-10"
     status: "Review completed 27 April 2023"
-    impact: "Licensed to an A*STAR spin-off"
+    impact: "Licensed to EMASS Pte Ltd"
   - id: "SWIP-PNVD-2022-33"
     title: "Porting of the AI accelerator ARM Linux kernel driver for MbedOS on the ECS-DoT RISC-V CPU"
     filed: "2023-03-10"
-    status: "Review scheduled 2 May 2023"
-    impact: "Licensed to an A*STAR spin-off"
+    status: "Review completed 2 May 2023"
+    impact: "Licensed to EMASS Pte Ltd"
   - id: "SWIP-TLCN-2022-32"
     title: "Tracing Linux compiler and kernel driver for an AI accelerator"
     filed: "2023-03-10"
     status: "Review completed 21 April 2023"
-    impact: "Expected to be licensed to the same spin-off"
-  - id: "SWIP-EIFE-2022-34"
-    title: "Edge Impulse firmware for ECS-DoT"
-    filed: "2023-03-10"
-    status: "Review scheduled July 2023"
-    impact: "Expected to be licensed to the same spin-off"
+    impact: "Licensed to EMASS Pte Ltd"
+  # Not completed: the review was only tentative and never took place, so this
+  # disclosure is not shown in the CVs.
+  # - id: "SWIP-EIFE-2022-34"
+  #   title: "Edge Impulse firmware for ECS-DoT"
+  #   filed: "2023-03-10"
+  #   status: "Review scheduled July 2023"
   - id: "TD2022128 / I2R/Z/13931"
     title: "Edge SoC with AI acceleration"
     filed: "2023-01-12"
-    status: "Pending director approval"
-    impact: "Licensed to an A*STAR spin-off"
-    creators: "M. M. Sabry Aly (NTU), A. Zaky, X. Qu, J. Lin, S. Ruocco, Z. Wang"
+    impact: "Licensed to EMASS Pte Ltd"

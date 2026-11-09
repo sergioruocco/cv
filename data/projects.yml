@@ -25,7 +25,7 @@
     the GCC toolchain and GDB.
   impact: >-
     Delivered a working RTOS port and board-support package; technology
-    disclosure SWIP-PMEP-2022-31, licensed to an A*STAR spin-off.
+    disclosure SWIP-PMEP-2022-31, licensed to EMASS Pte Ltd.
   featured: true
   tags: [industry, consulting, academic]
 
@@ -38,7 +38,7 @@
     RISC-V CPU, adapting the driver to a new operating system, memory map and
     device model.
   impact: >-
-    Technology disclosure SWIP-PNVD-2022-33, licensed to an A*STAR spin-off.
+    Technology disclosure SWIP-PNVD-2022-33, licensed to EMASS Pte Ltd.
   featured: true
   tags: [industry, consulting, academic]
 
@@ -50,21 +50,21 @@
     Built tracing and analysis tooling for the Linux compiler and kernel driver
     of the AI accelerator.
   impact: >-
-    Technology disclosure SWIP-TLCN-2022-32.
+    Technology disclosure SWIP-TLCN-2022-32, licensed to EMASS Pte Ltd.
   featured: false
   tags: [industry, consulting, academic]
 
-- id: edge-impulse
-  period: "2022 – 2023"
-  title: "Edge Impulse firmware for ECS-DoT"
-  context: "A*STAR I²R · ECS-DoT"
-  description: >-
-    Integrated Edge Impulse firmware with the ECS-DoT platform for on-device
-    machine learning.
-  impact: >-
-    Technology disclosure SWIP-EIFE-2022-34.
-  featured: false
-  tags: [industry, consulting, academic]
+# Removed: Edge Impulse work not completed (disclosure SWIP-EIFE-2022-34 was only tentative).
+# - id: edge-impulse
+#   period: "2022 – 2023"
+#   title: "Edge Impulse firmware for ECS-DoT"
+#   context: "A*STAR I²R · ECS-DoT"
+#   description: >-
+#     Integrated Edge Impulse firmware with the ECS-DoT platform for on-device
+#     machine learning.
+#   # Not completed: disclosure SWIP-EIFE-2022-34 was only tentative.
+#   featured: false
+#   tags: [industry, consulting, academic]
 
 - id: l4-real-time
   period: "2004 – 2007"

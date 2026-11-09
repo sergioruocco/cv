@@ -107,6 +107,8 @@ def pub_links(pub: dict) -> list[str]:
         links.append(f"[DOI](https://doi.org/{doi})")
     elif (pub.get("url") or "").strip():
         links.append(f"[paper]({pub['url'].strip()})")
+    for item in pub.get("press") or []:
+        links.append(f"[{md_em(item['label'])}]({item['url']})")
     return links
 
 
@@ -441,9 +443,13 @@ def render_patents(profile: dict, data: dict) -> str:
                 line += f" · {patent['note']}"
             chunks.append(line)
         chunks.append("### Technology disclosures")
+    if data["patents"].get("disclosures_note"):
+        chunks.append("*" + md_em(data["patents"]["disclosures_note"].strip()) + "*")
     for disclosure in data["patents"].get("disclosures", []):
         line = f"**{disclosure['id']}** — {disclosure['title']}."
-        line += f" Filed {disclosure['filed']}. {disclosure['status']}."
+        line += f" Filed {disclosure['filed']}."
+        if disclosure.get("status"):
+            line += f" {disclosure['status']}."
         if disclosure.get("impact"):
             line += f" {disclosure['impact']}."
         if disclosure.get("creators"):

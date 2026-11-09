@@ -3,6 +3,7 @@
 #   scholar  = counts shown in the 2025 CV; date in data/citations.yml (scholar_retrieved)
 #   openalex = counts from OpenAlex; date in data/citations.yml (retrieved)
 # Leave a count out when it is not known; the renderer simply omits it.
+# `press` lists articles about the paper (label + url); each becomes a link.
 
 - id: J1
   type: journal
@@ -43,6 +44,9 @@
   issue: "10"
   pages: "1652–1660"
   doi: "10.1109/TCSI.2016.2582203"
+  press:
+    - label: "A*STAR Research highlight"
+      url: "https://research.a-star.edu.sg/articles/highlights/reducing-read-errors-more-than-a-bit/"
   citations:
     openalex: 31
   featured: false

@@ -18,7 +18,7 @@ groups:
     items:
       - "C, GCC/G++, GDB and the GNU toolchain, native and cross-compiled"
       - "GCC backend and cross-compiler development"
-      - "Buildroot, Android SDK, MbedOS SDK, Edge Impulse"
+      - "Buildroot, Android SDK, MbedOS SDK"
       - "Python, Bash, Git, SSH, GPG, tmux/screen"
 
   - name: "Architectures and hardware"

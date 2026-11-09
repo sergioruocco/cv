@@ -48,6 +48,7 @@
             <div class="pub-meta">
               {% if citation_label(pub) %}<span>{{ citation_label(pub) }}</span>{% endif %}
               {% if pub_url(pub) %}<a href="{{ pub_url(pub) }}">{{ pub_link_label(pub) }}</a>{% endif %}
+              {% for item in pub.press or [] %}<a href="{{ item.url }}">{{ item.label }}</a>{% endfor %}
             </div>
           </div>
         </li>

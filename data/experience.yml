@@ -35,8 +35,7 @@
   highlights:
     - "Delivered the port of ARM MbedOS 5.12.4 and its SDK to the ECS-DoT RISC-V SoC, including CPU core, peripherals, memory map and I/O devices."
     - "Ported the AI accelerator's ARM Linux kernel driver to MbedOS on the ECS-DoT RISC-V CPU, and traced the Linux compiler and kernel driver for the accelerator."
-    - "Contributed to the Edge SoC with AI acceleration technology disclosure (TD2022128) and four software/technology disclosures licensed to an A*STAR spin-off."
-    - "Completed the Active Discs Clusters Performance Study (ADCPS) for Seagate USA (2017–2019)."
+    - "Contributed to the Edge SoC with AI acceleration technology disclosure (TD2022128) and three software disclosures, all licensed to EMASS Pte Ltd."
   tags: [academic, industry, consulting]
 
 - period: "10/2012 – 05/2018"
@@ -48,7 +47,7 @@
     solid-state storage and non-volatile memory.
   highlights:
     - "Extended Linux memory management for non-volatile DIMMs; the work led to an invited collaboration with CERN OpenLab and a talk at CERN OpenLab 2015."
-    - "Started the Active Discs Clusters Performance Study (ADCPS) for Seagate USA."
+    - "Led and delivered the Active Discs Clusters Performance Study (ADCPS) for Seagate USA (2017–2019), completed after the move to I²R."
   tags: [academic, industry, consulting]
 
 - period: "04/2007 – 09/2012"
