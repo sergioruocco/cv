@@ -9,7 +9,7 @@
     compile, optimise and run AI applications on a custom SoC designed and
     fabricated by the team.
   highlights:
-    - "Develops and ports the device drivers, bare-metal and Zephyr RTOS, SDK and GCC toolchain components of the ECS-DoT ultra-low-power AI SoC software stack."
+    - "Develops and releases the bare-metal SDK and runtime of the ECS-DoT ultra-low-power AI SoC, and packages the Zephyr RTOS SDK (board support, containers, debug tooling); integrates and qualifies the GCC RISC-V cross-toolchains (GCC 7 and GCC 11, x86-64 and arm64 hosts)."
     - "Targets a RISC-V core with dedicated deep-learning accelerators for edge AI IoT applications."
   tags: [academic, industry, consulting]
 
