@@ -38,8 +38,8 @@ academic: >-
 industry: >-
   Hands-on systems R&D leader with {years} years of experience spanning operating
   systems, compilers and embedded platforms. Dr. Ruocco is currently a Senior
-  Software Engineer at EMASS, where he builds the device drivers, bare-metal and
-  Zephyr RTOS, SDK and GCC toolchain, the CI/CD build and test pipeline, and the
+  Software Engineer at EMASS, where he builds the bare-metal SDK and runtime, the
+  Zephyr SDK, the board-controller firmware, the CI/CD build and test pipeline, and the
   IT/DevOps infrastructure for the ECS-DoT ultra-low-power RISC-V AI SoC, used
   by the EMASS engineering team and its customers. This work began at NTU
   (2024–2025), where as a Research Fellow he kept the ECS-DoT system software
