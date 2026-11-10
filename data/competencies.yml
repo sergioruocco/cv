@@ -19,7 +19,7 @@ groups:
       - "C, GCC/G++, GDB and the GNU toolchain, native and cross-compiled"
       - "GCC backend and cross-compiler development"
       - "Buildroot, Android SDK, MbedOS SDK"
-      - "Python, Bash, Git, SSH, GPG, tmux/screen"
+      - "Python, Bash, Git, SSH, GPG, tmux/screen; AI-assisted coding"
       - "Docker and Buildx, GitLab CI multi-project pipelines, GitHub and GitLab container registries; IT/DevOps infrastructure for engineering teams"
 
   - name: "Architectures and hardware"
@@ -35,4 +35,4 @@ groups:
       - "Real-time scheduling and temporal reflection"
       - "Performance analysis and system tracing"
       - "Debugging poorly documented hardware and software"
-      - "Technical leadership, procurement and project delivery"
+      - "Technical leadership, hiring and mentoring, procurement and project delivery"
