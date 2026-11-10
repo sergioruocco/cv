@@ -25,11 +25,11 @@ links:
     url: "https://scholar.google.com/citations?user=q1574qIAAAAJ"
   - label: "LinkedIn"
     url: "https://www.linkedin.com/in/sergio-ruocco/"
-  # Add these when available; the CV and site will pick them up automatically.
+  - label: "GitHub"
+    url: "https://github.com/sergioruocco"
+  # Add when available; the CV and site will pick it up automatically.
   # - label: "ORCID"
   #   url: "https://orcid.org/0000-0000-0000-0000"
-  # - label: "GitHub"
-  #   url: "https://github.com/..."
 
 nationality: "Italian"
 
