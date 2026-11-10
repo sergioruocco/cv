@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import html
 import os
 import re
 import shutil
@@ -42,6 +43,42 @@ TYPE_LABEL = {
     "thesis": "Thesis",
 }
 SITE_TAGLINE_PROFILE = "industry"  # whose tagline the website header uses
+# Inputs whose uncommitted edits mark a build as "+modified" in the stamp.
+SOURCE_PATHS = ["build.py", "data", "profiles", "templates", "assets"]
+
+
+def build_stamp() -> dict:
+    """Build date and the git revision of the CV sources it was built from."""
+    today = dt.date.today()
+    rev = ""
+    try:
+        rev = subprocess.run(
+            ["git", "-C", str(ROOT), "rev-parse", "--short", "HEAD"],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        dirty = subprocess.run(
+            ["git", "-C", str(ROOT), "status", "--porcelain", "--", *SOURCE_PATHS],
+            capture_output=True, text=True, check=True,
+        ).stdout.strip()
+        if rev and dirty:
+            rev += "+modified"
+    except (OSError, subprocess.CalledProcessError):
+        pass
+    long_date = f"{today.day} {today.strftime('%B %Y')}"
+    text = f"Updated {long_date}" + (f" · git {rev}" if rev else "")
+    return {"date": today.isoformat(), "long_date": long_date, "rev": rev, "text": text}
+
+
+STAMP = build_stamp()
+
+
+def photo_path(profile: dict, data: dict) -> Path | None:
+    """The round photo, if the profile shows one and the file exists."""
+    photo = data["profile"].get("photo")
+    if not photo or not profile.get("options", {}).get("photo"):
+        return None
+    path = ROOT / photo
+    return path if path.exists() else None
 
 
 # --------------------------------------------------------------------------- #
@@ -192,7 +229,9 @@ def header_markdown(profile: dict, data: dict) -> str:
     if p.get("website"):
         line2.append(f"[Website]({p['website']})")
 
-    lines = [
+    photo = photo_path(profile, data)
+    lines = [f"![{p['short_name']}]({photo}){{width=110px}}", ""] if photo else []
+    lines += [
         f"# {p['name']}",
         "",
         f"**{profile['tagline']}**  ",
@@ -231,8 +270,18 @@ def header_latex(profile: dict, data: dict) -> str:
     if p.get("website"):
         line2.append(rf"\href{{{p['website']}}}{{Website}}")
 
-    return "\n".join(
+    photo = photo_path(profile, data)
+    photo_box = (
         [
+            r"\noindent\makebox[0pt][l]{\raisebox{-\height}[0pt][0pt]{"
+            rf"\includegraphics[height=2.45cm]{{{photo}}}}}}}%",
+        ]
+        if photo
+        else []
+    )
+    return "\n".join(
+        photo_box
+        + [
             r"\begin{center}",
             rf"{{\fontsize{{24}}{{28}}\selectfont\bfseries\color{{accent}} {tex_escape(p['name'])}}}\\[2pt]",
             rf"{{\fontsize{{11}}{{13}}\selectfont {tex_escape(profile['tagline'])}}}\\[1pt]",
@@ -649,7 +698,18 @@ def build_profile(profile: dict, data: dict) -> dict:
     header_tex = OUT_DIR / f"{name}.header.tex"
 
     body = render_body(profile, data)
-    md_path.write_text(header_markdown(profile, data) + "\n" + body, encoding="utf-8")
+    # The stamp goes at the end of the DOCX and HTML only; the PDF has it in the footer.
+    stamp = html.escape(STAMP["text"])
+    footer_md = (
+        f'\n\n```{{=html}}\n<p class="stamp">{stamp}</p>\n```\n\n'
+        "```{=openxml}\n"
+        '<w:p><w:pPr><w:spacing w:before="240"/><w:jc w:val="right"/></w:pPr>'
+        f'<w:r><w:rPr><w:i/><w:color w:val="5A6570"/><w:sz w:val="16"/></w:rPr>'
+        f'<w:t xml:space="preserve">{stamp}</w:t></w:r></w:p>\n```\n'
+    )
+    md_path.write_text(
+        header_markdown(profile, data) + "\n" + body + footer_md, encoding="utf-8"
+    )
     header_tex.write_text(header_latex(profile, data), encoding="utf-8")
 
     reference = TEMPLATE_DIR / "reference.docx"
@@ -686,6 +746,7 @@ def build_profile(profile: dict, data: dict) -> dict:
             "--pdf-engine=xelatex",
             f"--template={TEMPLATE_DIR / 'cv.latex'}",
             f"--include-before-body={header_tex}",
+            f"--variable=stamp:{tex_escape(STAMP['text'])}",
             "-o",
             str(pdf_path),
         ]
@@ -732,6 +793,8 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
         lstrip_blocks=True,
     )
     shutil.copy2(TEMPLATE_DIR / "site.css", DOCS_DIR / "style.css")
+    if data["profile"].get("photo"):
+        shutil.copy2(ROOT / "assets" / "photo.jpg", DOCS_DIR / "photo.jpg")
 
     p = data["profile"]
     scholar = next((l["url"] for l in p.get("links", []) if l["label"] == "Google Scholar"), "")
@@ -740,7 +803,7 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
         [pub for pub in pubs if pub.get("featured")],
         key=lambda pub: (-int(pub.get("year", 0)), TYPE_ORDER.get(pub.get("type"), 9), pub.get("id", "")),
     )
-    today = dt.date.today().isoformat()
+    today = STAMP["date"]
 
     tagline_profile = next(
         (pr for pr in profiles if pr["name"] == SITE_TAGLINE_PROFILE), profiles[0]
@@ -754,6 +817,8 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
         selected=selected,
         scholar=scholar,
         today=today,
+        rev=STAMP["rev"],
+        photo="photo.jpg" if p.get("photo") else "",
         downloads=outputs,
         citation_label=pub_citation_label,
         pub_link_label=pub_link_label,
@@ -773,6 +838,7 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
         ],
         scholar=scholar,
         today=today,
+        rev=STAMP["rev"],
         citation_label=pub_citation_label,
         pub_link_label=pub_link_label,
         pub_url=lambda pub: (

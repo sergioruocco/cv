@@ -60,7 +60,7 @@
 
   <footer>
     <div class="wrap">
-      <span>© {{ today[:4] }} {{ profile.short_name }}. Last updated {{ today }}.</span>
+      <span>© {{ today[:4] }} {{ profile.short_name }}. Last updated {{ today }}{% if rev %} (git {{ rev }}){% endif %}.</span>
       <span><a href="index.html">Back to CV</a></span>
     </div>
   </footer>

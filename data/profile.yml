@@ -33,6 +33,10 @@ links:
 
 nationality: "Italian"
 
+# Head-and-shoulders photo (round crop). Each profile turns it on with
+# options.photo; the website uses the square assets/photo.jpg.
+photo: "assets/photo-round.png"
+
 # Start of professional experience (first consulting job, CD Express, 1996).
 # Bios write "{years}" and the build fills in the current count.
 career_start: 1996

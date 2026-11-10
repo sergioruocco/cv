@@ -99,3 +99,17 @@ hr {
     break-after: avoid;
   }
 }
+
+/* Build date and git revision at the end of the HTML CV. */
+.stamp {
+  margin-top: 2em;
+  text-align: right;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #5a6570;
+}
+img[alt="Sergio Ruocco"] {
+  display: block;
+  margin: 0 auto 0.5em;
+  border-radius: 50%;
+}

@@ -10,6 +10,7 @@
 <body>
   <header class="hero">
     <div class="wrap">
+      {% if photo %}<img class="photo" src="{{ photo }}" alt="{{ profile.short_name }}" width="140" height="140">{% endif %}
       <h1>{{ profile.name }}</h1>
       <p class="tagline">{{ tagline }}</p>
       <p class="affiliation">{{ profile.affiliation }}</p>
@@ -116,7 +117,7 @@
 
   <footer>
     <div class="wrap">
-      <span>© {{ today[:4] }} {{ profile.short_name }}. Last updated {{ today }}.</span>
+      <span>© {{ today[:4] }} {{ profile.short_name }}. Last updated {{ today }}{% if rev %} (git {{ rev }}){% endif %}.</span>
       <span>Citation counts: OpenAlex. Live counts: {% if scholar %}<a href="{{ scholar }}">Google Scholar</a>{% else %}Google Scholar{% endif %}.</span>
     </div>
   </footer>
