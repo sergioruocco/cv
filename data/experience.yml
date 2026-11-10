@@ -9,7 +9,7 @@
     compile, optimise and run AI applications on a custom SoC designed and
     fabricated by the team.
   highlights:
-    - "Planned and leads the port of the Zephyr RTOS to ECS-DoT: feasibility pre-study (first Zephyr image loaded and stepped on the SoC), toolchain and CPU-core analysis, task plan and staffing presented to management (06/2025); recruited, trained and mentored the two junior engineers who wrote most of the port under his guidance, and packages the Zephyr SDK (board support, containers, debug tooling)."
+    - "Planned the port of the Zephyr RTOS to ECS-DoT and, once approved, delivered it on time by training and mentoring a new junior team (a graduate engineer and three first-year computer-engineering interns); packages the Zephyr SDK (board support, containers, debug tooling)."
     - "Develops and releases the bare-metal SDK and runtime of the ECS-DoT ultra-low-power AI SoC; integrates and qualifies the GCC RISC-V cross-toolchains (GCC 7 and GCC 11, x86-64 and arm64 hosts)."
     - "Targets a RISC-V core with dedicated deep-learning accelerators for edge AI IoT applications."
     - "Built the ECS-DoT boot agent on the open-source DirtyJTAG firmware for the Raspberry Pi Pico 2 (RP2350) of the ECS-DoT development boards: it loads RISC-V applications into the SoC over JTAG at power-up, doubles as an OpenOCD adapter and USB-serial bridge, controls board power, and has shipped to customers in tagged releases since 07/2026."
