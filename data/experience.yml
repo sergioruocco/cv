@@ -11,6 +11,8 @@
   highlights:
     - "Develops and releases the bare-metal SDK and runtime of the ECS-DoT ultra-low-power AI SoC, and packages the Zephyr RTOS SDK (board support, containers, debug tooling); integrates and qualifies the GCC RISC-V cross-toolchains (GCC 7 and GCC 11, x86-64 and arm64 hosts)."
     - "Targets a RISC-V core with dedicated deep-learning accelerators for edge AI IoT applications."
+    - "Built the ECS-DoT boot agent on the open-source DirtyJTAG firmware for the Raspberry Pi Pico 2 (RP2350) of the ECS-DoT development boards: it loads RISC-V applications into the SoC over JTAG at power-up, doubles as an OpenOCD adapter and USB-serial bridge, controls board power, and has shipped to customers in tagged releases since 07/2026."
+    - "Fixed and extended the OpenOCD DirtyJTAG adapter driver (protocol, bit ordering, multi-adapter selection, reset lines) to drive the SoC's RISC-V debug module; designed the boot agent's companion link to the ECS-DoT runtime for dynamic voltage and frequency scaling and on-board power measurement of AI inference."
     - "Designed and runs the SDK build-and-release pipeline: a three-tier container hierarchy (Linux devtools, vanilla bare-metal and Zephyr SDKs, per-customer SDK images) on self-hosted GitLab CI with cross-project rebuild cascades, published to GitHub and GitLab registries; regular bare-metal SDK releases since v4.0.0 (04/2026)."
   tags: [academic, industry, consulting]
 

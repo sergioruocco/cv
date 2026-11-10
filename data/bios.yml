@@ -3,7 +3,8 @@
 
 short: >-
   Dr. Sergio Ruocco is a Senior Software Engineer at EMASS, an NTU/A*STAR
-  spin-off in Singapore, where he builds the full software stack, the CI/CD
+  spin-off in Singapore, where he builds the full software stack (from the development boards'
+  boot-agent firmware to the SDK), the CI/CD
   build and test pipeline, and the IT/DevOps infrastructure for ECS-DoT, an
   ultra-low-power AI SoC with a RISC-V core and dedicated hardware
   accelerators, used by the EMASS engineering team and its customers. He has {years} years of academic and industrial R&D in embedded and
@@ -28,7 +29,8 @@ academic: >-
   toolchains for non-volatile memory, storage systems, RISC-V
   platforms and AI accelerators, including the port of MbedOS and Linux device
   drivers to the ECS-DoT SoC and its AI accelerator. He is currently a
-  Senior Software Engineer at EMASS, building the full software stack, the
+  Senior Software Engineer at EMASS, building the full software stack (from the development boards'
+  boot-agent firmware to the SDK), the
   CI/CD build and test pipeline, and the IT/DevOps infrastructure for the
   ECS-DoT ultra-low-power AI SoC used by the EMASS engineering team and its
   customers. His work has appeared at IEEE RTSS, ISCAS,
@@ -39,7 +41,8 @@ industry: >-
   Hands-on systems R&D leader with {years} years of experience spanning operating
   systems, compilers and embedded platforms. Dr. Ruocco is currently a Senior
   Software Engineer at EMASS, where he builds the bare-metal SDK and runtime, the
-  Zephyr SDK, the board-controller firmware, the CI/CD build and test pipeline, and the
+  Zephyr SDK, the Raspberry Pi Pico 2 boot-agent firmware of its development
+  boards, the CI/CD build and test pipeline, and the
   IT/DevOps infrastructure for the ECS-DoT ultra-low-power RISC-V AI SoC, used
   by the EMASS engineering team and its customers. This work began at NTU
   (2024–2025), where as a Research Fellow he kept the ECS-DoT system software
@@ -63,6 +66,7 @@ consulting: >-
   improving real-time behaviour, analysing system performance, and setting up
   CI/CD build and test pipelines and IT/DevOps infrastructure. He is currently a
   Senior Software Engineer at EMASS, an NTU/A*STAR spin-off, where he builds the
-  full software stack, the CI/CD pipeline and the IT/DevOps infrastructure for
+  full software stack (from the development boards' boot-agent firmware to the
+  SDK), the CI/CD pipeline and the IT/DevOps infrastructure for
   the ECS-DoT ultra-low-power RISC-V AI SoC. His clients have included Seagate
   (USA) and Micron Italy, and he has led EU ENIAC projects with STMicroelectronics.

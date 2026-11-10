@@ -13,6 +13,20 @@
   featured: true
   tags: [academic, industry, consulting]
 
+- id: ecsdot-boot-agent
+  period: "2026 – present"
+  title: "ECS-DoT boot agent and JTAG adapter on the Raspberry Pi Pico 2"
+  context: "EMASS · ECS-DoT development boards"
+  description: >-
+    Extended the open-source DirtyJTAG firmware into the boards' boot agent: it
+    loads RISC-V applications into the SoC over JTAG at power-up, serves as an
+    OpenOCD adapter and USB-serial bridge, and drives the boards' power control
+    and measurement.
+  impact: >-
+    Shipped to customers in tagged firmware releases since 07/2026.
+  featured: true
+  tags: [industry, consulting, academic]
+
 - id: mbedos-ecsdot
   period: "2020 – 2024"
   title: "MbedOS and SDK port to the ECS-DoT RISC-V SoC"

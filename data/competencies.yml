@@ -24,7 +24,8 @@ groups:
 
   - name: "Architectures and hardware"
     items:
-      - "ARM and RISC-V platforms; board bring-up, JTAG and OpenOCD; RP2350 (Pico 2) firmware"
+      - "ARM and RISC-V platforms; board bring-up, JTAG and RISC-V debug (OpenOCD)"
+      - "Microcontroller firmware on RP2040/RP2350: Pico SDK, PIO, TinyUSB, I²C and UART"
       - "FPGA boards, peripherals, memory maps and I/O devices"
       - "Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and storage systems"
       - "AI accelerators and video-compression hardware"
