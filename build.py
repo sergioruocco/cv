@@ -230,7 +230,8 @@ def header_markdown(profile: dict, data: dict) -> str:
         line2.append(f"[Website]({p['website']})")
 
     photo = photo_path(profile, data)
-    lines = [f"![{p['short_name']}]({photo}){{width=110px}}", ""] if photo else []
+    # The trailing "\\ " keeps pandoc from turning the image into a figure.
+    lines = [f"![{p['short_name']}]({photo}){{width=110px}}\\ ", ""] if photo else []
     lines += [
         f"# {p['name']}",
         "",
@@ -270,26 +271,30 @@ def header_latex(profile: dict, data: dict) -> str:
     if p.get("website"):
         line2.append(rf"\href{{{p['website']}}}{{Website}}")
 
+    text = [
+        rf"{{\fontsize{{22}}{{26}}\selectfont\bfseries\color{{accent}} {tex_escape(p['name'])}}}\\[4pt]",
+        rf"{{\bfseries {tex_escape(profile['tagline'])}}}\\",
+        rf"{tex_escape(p['affiliation'])}\\[3pt]",
+    ]
+    if line1:
+        text.append(r" \enspace\textperiodcentered\enspace ".join(line1) + r"\\")
+    text.append(r"{\small " + r" \enspace\textperiodcentered\enspace ".join(line2) + "}")
+
     photo = photo_path(profile, data)
-    photo_box = (
-        [
-            r"\noindent\makebox[0pt][l]{\raisebox{-\height}[0pt][0pt]{"
-            rf"\includegraphics[height=2.45cm]{{{photo}}}}}}}%",
-        ]
-        if photo
-        else []
-    )
+    if not photo:
+        return "\n".join([r"\begin{center}", *text, r"\end{center}", ""])
+    # Photo on the left, the header text beside it, both vertically centred.
     return "\n".join(
-        photo_box
-        + [
-            r"\begin{center}",
-            rf"{{\fontsize{{24}}{{28}}\selectfont\bfseries\color{{accent}} {tex_escape(p['name'])}}}\\[2pt]",
-            rf"{{\fontsize{{11}}{{13}}\selectfont {tex_escape(profile['tagline'])}}}\\[1pt]",
-            rf"{{\fontsize{{10}}{{12}}\selectfont {tex_escape(p['affiliation'])}}}\\[6pt]",
-            r"{\small " + r" \quad\textperiodcentered\quad ".join(line1) + r"}\\[1pt]",
-            r"{\small " + r" \quad\textperiodcentered\quad ".join(line2) + "}",
-            r"\end{center}",
-            r"\vspace{-1pt}",
+        [
+            r"\noindent",
+            r"\begin{minipage}[c]{2.3cm}",
+            rf"\includegraphics[width=2.3cm]{{{photo}}}",
+            r"\end{minipage}\hfill",
+            r"\begin{minipage}[c]{\dimexpr\linewidth-2.65cm\relax}",
+            r"\raggedright",
+            *text,
+            r"\end{minipage}",
+            r"\par\vspace{2pt}",
             "",
         ]
     )
@@ -695,7 +700,7 @@ def build_profile(profile: dict, data: dict) -> dict:
     docx_path = OUT_DIR / f"{name}.docx"
     pdf_path = OUT_DIR / f"{name}.pdf"
     html_path = OUT_DIR / f"{name}.html"
-    header_tex = OUT_DIR / f"{name}.header.tex"
+    pdf_md_path = OUT_DIR / f"{name}.pdf.md"
 
     body = render_body(profile, data)
     # The stamp goes at the end of the DOCX and HTML only; the PDF has it in the footer.
@@ -710,7 +715,9 @@ def build_profile(profile: dict, data: dict) -> dict:
     md_path.write_text(
         header_markdown(profile, data) + "\n" + body + footer_md, encoding="utf-8"
     )
-    header_tex.write_text(header_latex(profile, data), encoding="utf-8")
+    pdf_md_path.write_text(
+        f"```{{=latex}}\n{header_latex(profile, data)}```\n\n{body}", encoding="utf-8"
+    )
 
     reference = TEMPLATE_DIR / "reference.docx"
     run(
@@ -741,11 +748,10 @@ def build_profile(profile: dict, data: dict) -> dict:
     run(
         [
             "pandoc",
-            str(md_path),
+            str(pdf_md_path),
             "--from=markdown+smart",
             "--pdf-engine=xelatex",
             f"--template={TEMPLATE_DIR / 'cv.latex'}",
-            f"--include-before-body={header_tex}",
             f"--variable=stamp:{tex_escape(STAMP['text'])}",
             "-o",
             str(pdf_path),
@@ -753,7 +759,6 @@ def build_profile(profile: dict, data: dict) -> dict:
     )
 
     fix_docx_keep_together(docx_path, profile, data)
-    header_tex.unlink(missing_ok=True)
     for path in (pdf_path, docx_path, html_path):
         shutil.copy2(path, FILES_DIR / path.name)
 
