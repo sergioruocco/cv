@@ -5,6 +5,7 @@ tagline: "Senior Software Engineer, EMASS · Embedded and real-time systems, Lin
 bio: industry
 summary_heading: "Profile"
 sections:
+  - summary
   - skills
   - experience
   - projects

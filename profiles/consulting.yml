@@ -5,6 +5,7 @@ tagline: "Embedded and real-time systems, Linux and toolchain consultant · Seni
 bio: consulting
 summary_heading: "Profile"
 sections:
+  - summary
   - capabilities
   - projects
   - experience

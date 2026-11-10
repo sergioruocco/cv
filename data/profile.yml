@@ -32,3 +32,7 @@ links:
   #   url: "https://github.com/..."
 
 nationality: "Italian"
+
+# Start of professional experience (first consulting job, CD Express, 1996).
+# Bios write "{years}" and the build fills in the current count.
+career_start: 1996

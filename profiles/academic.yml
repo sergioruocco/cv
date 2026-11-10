@@ -5,6 +5,7 @@ tagline: "Senior Software Engineer, EMASS · Embedded and real-time systems, com
 bio: academic
 summary_heading: "Research profile"
 sections:
+  - summary
   - research_interests
   - education
   - experience

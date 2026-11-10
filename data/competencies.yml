@@ -20,6 +20,7 @@ groups:
       - "GCC backend and cross-compiler development"
       - "Buildroot, Android SDK, MbedOS SDK"
       - "Python, Bash, Git, SSH, GPG, tmux/screen"
+      - "Docker; CI/CD build and test pipelines; IT/DevOps infrastructure for engineering teams"
 
   - name: "Architectures and hardware"
     items:

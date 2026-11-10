@@ -250,10 +250,18 @@ def header_latex(profile: dict, data: dict) -> str:
 # Section renderers
 # --------------------------------------------------------------------------- #
 
+def bio_text(data: dict, key: str) -> str:
+    """A bio from bios.yml with {years} filled in from profile.career_start."""
+    bio = (data["bios"].get(key) or data["bios"]["short"]).strip()
+    start = data["profile"].get("career_start")
+    if start:
+        bio = bio.replace("{years}", str(dt.date.today().year - int(start)))
+    return bio
+
+
 def render_summary(profile: dict, data: dict) -> str:
-    bio = data["bios"].get(profile["bio"]) or data["bios"]["short"]
     heading = profile.get("summary_heading", "Profile")
-    return f"## {heading}\n\n{bio.strip()}\n"
+    return f"## {heading}\n\n{bio_text(data, profile['bio'])}\n"
 
 
 def render_research_interests(profile: dict, data: dict) -> str:
@@ -740,7 +748,7 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
     index_html = env.get_template("site_index.html.j2").render(
         profile=p,
         tagline=tagline_profile["tagline"],
-        bio=data["bios"]["academic"].strip(),
+        bio=bio_text(data, "academic"),
         interests=data["research_interests"],
         experience=data["experience"][:4],
         selected=selected,

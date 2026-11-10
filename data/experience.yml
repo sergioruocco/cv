@@ -18,10 +18,14 @@
   org: "School of Computer Science and Engineering, Nanyang Technological University (NTU)"
   location: "Singapore"
   summary: >-
-    End-to-end software for ECS-DoT, an ultra-low-power AI SoC with a RISC-V core
-    and dedicated hardware accelerators: device drivers, RTOS, SDK and toolchains.
+    Kept the ECS-DoT system-software engineering going between A*STAR I²R and
+    EMASS, laying the groundwork for the EMASS role: the first bare-metal SDK,
+    its SPI and camera drivers, and analysis of hardware bugs in the SoC's SPI
+    peripheral.
   highlights:
-    - "Continued the ECS-DoT AI-accelerator software work that seeded the EMASS spin-off."
+    - "Developed the first bare-metal SDK for the ECS-DoT SoC."
+    - "Completed the bit-bang SPI driver and ported an SPI camera driver to the bare-metal SDK."
+    - "Isolated and analysed hardware bugs in the SoC's hardware SPI peripheral."
   tags: [academic, industry, consulting]
 
 - period: "06/2018 – 09/2023"
