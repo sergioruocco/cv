@@ -18,7 +18,7 @@ emails:
     primary: false
 
 # Shown in the CV headers (the website itself does not link to itself).
-website: "https://sruocco-i2r.github.io/cv/"
+website: "https://sergioruocco.github.io/cv/"
 
 links:
   - label: "Google Scholar"
