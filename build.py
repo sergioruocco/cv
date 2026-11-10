@@ -274,11 +274,17 @@ def header_latex(profile: dict, data: dict) -> str:
     text = [
         rf"{{\fontsize{{22}}{{26}}\selectfont\bfseries\color{{accent}} {tex_escape(p['name'])}}}\\[4pt]",
         rf"{{\bfseries {tex_escape(profile['tagline'])}}}\\",
-        rf"{tex_escape(p['affiliation'])}\\[3pt]",
+        # Affiliation and personal details share one line to keep the header short.
+        r"\enspace\textperiodcentered\enspace ".join([tex_escape(p["affiliation"]), *line1])
+        + r"\\[3pt]",
     ]
-    if line1:
-        text.append(r" \enspace\textperiodcentered\enspace ".join(line1) + r"\\")
-    text.append(r"{\small " + r" \enspace\textperiodcentered\enspace ".join(line2) + "}")
+    # Each link stays whole (\mbox), and the separator sticks to the link before it,
+    # so a wrapped line never splits a link or starts with "·".
+    text.append(
+        r"{\small "
+        + r"~\textperiodcentered\ ".join(rf"\mbox{{{item}}}" for item in line2)
+        + "}"
+    )
 
     photo = photo_path(profile, data)
     if not photo:
