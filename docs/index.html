@@ -36,7 +36,7 @@
   <main class="wrap">
     <section id="about">
       <h2>About</h2>
-      <p class="lead">Dr. Ruocco's research concerns the analysis, design and implementation of time-sensitive and time-aware computer systems. His PhD introduced temporal reflection, a class of computational reflection through which a system can represent, observe and control its own temporal behaviour; he designed and implemented a reflective real-time scheduler for the L4 microkernel. At NICTA he analysed and improved the real-time properties of general-purpose L4 microkernels. At A*STAR and NTU he worked on systems software and programming toolchains for non-volatile memory, storage systems, RISC-V platforms and AI accelerators, including the port of MbedOS and Linux device drivers to the ECS-DoT SoC and its AI accelerator. He is currently a Senior Software Engineer at EMASS, building the full software stack, the CI/CD build and test pipeline, and the IT/DevOps infrastructure for the ECS-DoT ultra-low-power AI SoC used by the EMASS engineering team and its customers. His work has appeared at IEEE RTSS, ISCAS, TCAS-I and JETCAS and in the EURASIP Journal on Embedded Systems, and has led to a US patent and several technology disclosures licensed to EMASS Pte Ltd.</p>
+      <p class="lead">Dr. Ruocco's research concerns the analysis, design and implementation of time-sensitive and time-aware computer systems. His PhD introduced temporal reflection, a class of computational reflection through which a system can represent, observe and control its own temporal behaviour; he designed and implemented a reflective real-time scheduler for the L4 microkernel. At NICTA he analysed and improved the real-time properties of general-purpose L4 microkernels. At A*STAR and NTU he worked on systems software and programming toolchains for non-volatile memory, storage systems, RISC-V platforms and AI accelerators, including the port of MbedOS and Linux device drivers to the ECS-DoT SoC and its AI accelerator. He is currently a Senior Software Engineer at EMASS, building the full software stack (from the development boards' boot-agent firmware to the SDK), leading the Zephyr RTOS port with junior engineers he recruited and mentors, and building the CI/CD build and test pipeline, and the IT/DevOps infrastructure for the ECS-DoT ultra-low-power AI SoC used by the EMASS engineering team and its customers. His work has appeared at IEEE RTSS, ISCAS, TCAS-I and JETCAS and in the EURASIP Journal on Embedded Systems, and has led to a US patent and several technology disclosures licensed to EMASS Pte Ltd.</p>
     </section>
 
     <section id="interests">
@@ -122,7 +122,8 @@
             <h3>Senior Software Engineer</h3>
             <p class="org">EMASS (an NTU/A*STAR spin-off)</p>
 <p>End-to-end software for ECS-DoT, an ultra-low-power AI SoC with a RISC-V core and dedicated hardware accelerators. Research and development of the full stack of software and tools — device drivers, RTOS, SDK and toolchains — to compile, optimise and run AI applications on a custom SoC designed and fabricated by the team.</p>            <ul>
-              <li>Develops and ports the device drivers, bare-metal and Zephyr RTOS, SDK and GCC toolchain components of the ECS-DoT ultra-low-power AI SoC software stack.</li>
+              <li>Planned and leads the port of the Zephyr RTOS to ECS-DoT: feasibility pre-study (first Zephyr image loaded and stepped on the SoC), toolchain and CPU-core analysis, task plan and staffing presented to management (06/2025); recruited, trained and mentored the two junior engineers who wrote most of the port under his guidance, and packages the Zephyr SDK (board support, containers, debug tooling).</li>
+              <li>Develops and releases the bare-metal SDK and runtime of the ECS-DoT ultra-low-power AI SoC; integrates and qualifies the GCC RISC-V cross-toolchains (GCC 7 and GCC 11, x86-64 and arm64 hosts).</li>
               <li>Targets a RISC-V core with dedicated deep-learning accelerators for edge AI IoT applications.</li>
             </ul>
           </div>
@@ -147,7 +148,7 @@
 <p>Embedded real-time operating systems, SDKs, firmware and drivers for a RISC-V-based SoC customised with a deep-learning accelerator for ultra-low-power edge-IoT applications.</p>            <ul>
               <li>Delivered the port of ARM MbedOS 5.12.4 and its SDK to the ECS-DoT RISC-V SoC, including CPU core, peripherals, memory map and I/O devices.</li>
               <li>Ported the AI accelerator's ARM Linux kernel driver to MbedOS on the ECS-DoT RISC-V CPU, and traced the Linux compiler and kernel driver for the accelerator.</li>
-              <li>Contributed to the Edge SoC with AI acceleration technology disclosure (TD2022128) and three software disclosures, all licensed to EMASS Pte Ltd.</li>
+              <li>Containerised the ECS-DoT SDK build with Docker, including OpenOCD and JTAG/USB board access (2023): the starting point of the SDK build-and-release pipeline later run at EMASS.</li>
             </ul>
           </div>
         </div>

@@ -126,7 +126,8 @@ drivers, building GCC backends, improving real-time behaviour, analysing
 system performance, and setting up CI/CD build and test pipelines and
 IT/DevOps infrastructure. He is currently a Senior Software Engineer at
 EMASS, an NTU/A*STAR spin-off, where he builds the full software stack,
-the CI/CD pipeline and the IT/DevOps infrastructure for the ECS-DoT
+leads the Zephyr RTOS port with a team he recruited and mentors, and
+runs the CI/CD and IT/DevOps infrastructure for the ECS-DoT
 ultra-low-power RISC-V AI SoC. His clients have included Seagate (USA)
 and Micron Italy, and he has led EU ENIAC projects with
 STMicroelectronics.</p>
@@ -142,16 +143,19 @@ export-controlled software licence servers.</p>
 <p><strong>Languages and toolchains.</strong> C, GCC/G++, GDB and the
 GNU toolchain, native and cross-compiled; GCC backend and cross-compiler
 development; Buildroot, Android SDK, MbedOS SDK; Python, Bash, Git, SSH,
-GPG, tmux/screen; Docker; CI/CD build and test pipelines; IT/DevOps
-infrastructure for engineering teams.</p>
+GPG, tmux/screen; AI-assisted coding; Docker and Buildx, GitLab CI
+multi-project pipelines, GitHub and GitLab container registries;
+IT/DevOps infrastructure for engineering teams.</p>
 <p><strong>Architectures and hardware.</strong> ARM and RISC-V
-platforms; board bring-up and JTAG; FPGA boards, peripherals, memory
-maps and I/O devices; Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and
-storage systems; AI accelerators and video-compression hardware.</p>
+platforms; board bring-up, JTAG and RISC-V debug (OpenOCD);
+Microcontroller firmware on RP2040/RP2350: Pico SDK, PIO, TinyUSB, I²C
+and UART; FPGA boards, peripherals, memory maps and I/O devices;
+Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and storage systems; AI
+accelerators and video-compression hardware.</p>
 <p><strong>Methods.</strong> Real-time scheduling and temporal
 reflection; Performance analysis and system tracing; Debugging poorly
-documented hardware and software; Technical leadership, procurement and
-project delivery.</p>
+documented hardware and software; Technical leadership, hiring and
+mentoring, procurement and project delivery.</p>
 <h2 id="selected-projects">Selected projects</h2>
 <p><strong>Full software stack for the ECS-DoT ultra-low-power RISC-V AI
 SoC</strong></p>
@@ -164,6 +168,15 @@ accelerators, designed and fabricated by the team.</p>
 <p><strong>Impact:</strong> Enables AI workloads on the ECS-DoT SoC;
 builds on the AI-accelerator driver and RTOS work done at A*STAR
 I²R.</p>
+<p><strong>ECS-DoT boot agent and JTAG adapter on the Raspberry Pi Pico
+2</strong></p>
+<p><em>2026 – present · EMASS · ECS-DoT development boards</em></p>
+<p>Extended the open-source DirtyJTAG firmware into the boards’ boot
+agent: it loads RISC-V applications into the SoC over JTAG at power-up,
+serves as an OpenOCD adapter and USB-serial bridge, and drives the
+boards’ power control and measurement.</p>
+<p><strong>Impact:</strong> Shipped to customers in tagged firmware
+releases since 07/2026.</p>
 <p><strong>MbedOS and SDK port to the ECS-DoT RISC-V SoC</strong></p>
 <p><em>2020 – 2024 · A*STAR I²R / NTU · ECS-DoT Edge SoC with AI
 acceleration</em></p>
