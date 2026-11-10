@@ -20,11 +20,11 @@ groups:
       - "GCC backend and cross-compiler development"
       - "Buildroot, Android SDK, MbedOS SDK"
       - "Python, Bash, Git, SSH, GPG, tmux/screen"
-      - "Docker; CI/CD build and test pipelines; IT/DevOps infrastructure for engineering teams"
+      - "Docker and Buildx, GitLab CI multi-project pipelines, GitHub and GitLab container registries; IT/DevOps infrastructure for engineering teams"
 
   - name: "Architectures and hardware"
     items:
-      - "ARM and RISC-V platforms; board bring-up and JTAG"
+      - "ARM and RISC-V platforms; board bring-up, JTAG and OpenOCD; RP2350 (Pico 2) firmware"
       - "FPGA boards, peripherals, memory maps and I/O devices"
       - "Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and storage systems"
       - "AI accelerators and video-compression hardware"
