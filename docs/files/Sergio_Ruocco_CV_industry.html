@@ -144,12 +144,16 @@ Fellow he kept the ECS-DoT system software going between A*STAR I²R and
 EMASS, developing the first bare-metal SDK and its SPI and camera
 drivers and isolating hardware bugs in the SoC’s SPI peripheral. He has
 a track record of taking poorly documented hardware and turning it into
-working systems: GCC backends, Linux kernel and driver code, RTOS ports,
-board-support packages and performance-analysis tools. He is comfortable
-from board bring-up and JTAG to kernel memory management and compiler
-internals, and has led industry projects for Seagate and Micron as well
-as EU-funded R&amp;D with STMicroelectronics. He combines deep technical
-work with project leadership, procurement and end-to-end delivery.</p>
+working systems: a GCC backend, Linux kernel and driver code, RTOS
+ports, board-support packages and performance-analysis tools. He is
+comfortable from board bring-up and JTAG to kernel memory management and
+compiler internals, and has led industry projects for Seagate and Micron
+as well as EU-funded R&amp;D with STMicroelectronics. He combines deep
+technical work with project leadership, procurement and end-to-end
+delivery. He also brings an original architectural approach to
+time-sensitive, ultra-low-latency systems: treating temporal behaviour
+as an observable, controllable runtime object to eliminate tail-latency
+outliers (“jitter”) across OS, memory and hardware layers.</p>
 <h2 id="technical-skills">Technical skills</h2>
 <p><strong>Operating systems and platforms.</strong> Linux (Debian,
 Ubuntu, Mint, Red Hat) on workstations and datacentre servers; L4
@@ -170,9 +174,9 @@ and UART; FPGA boards, peripherals, memory maps and I/O devices;
 Non-volatile memory (NVM-DIMM, PCM, STT-MRAM) and storage systems; AI
 accelerators and video-compression hardware.</p>
 <p><strong>Methods.</strong> Real-time scheduling and temporal
-reflection; Performance analysis and system tracing; Debugging poorly
-documented hardware and software; Technical leadership, mentoring,
-procurement and project delivery.</p>
+reflection; Performance analysis, tail-latency (“jitter”) elimination
+and system tracing; Debugging poorly documented hardware and software;
+Technical leadership, mentoring, procurement and project delivery.</p>
 <h2 id="experience">Experience</h2>
 <p><strong>Senior Software Engineer</strong> — EMASS (an NTU/A*STAR
 spin-off)</p>
@@ -262,7 +266,9 @@ microkernel</strong></p>
 <p>Analysed the real-time behaviour of general-purpose L4 microkernels,
 identified the architectural obstacles to predictable scheduling, and
 designed and implemented a reflective real-time scheduler that lets a
-system observe and control its own temporal behaviour.</p>
+system observe and control its own temporal behaviour, with
+microsecond-level accuracy, entirely at user level and without kernel
+changes.</p>
 <p><strong>Impact:</strong> Published at IEEE RTSS 2006 and OSPERT
 2006/2007 and in the EURASIP Journal on Embedded Systems; the work
 influenced the real-time features of the commercial OKL4
@@ -361,6 +367,6 @@ graded.</p>
 <em>Università degli Studi di Milano, Italy — 110/110 cum laude</em></p>
 <p>Thesis: <em>HyperReal: a paradigm for the design and synthesis of
 hard real-time control systems</em>.</p>
-<p class="stamp">Updated 10 November 2026 · git f2a1f09</p>
+<p class="stamp">Updated 20 November 2026 · git 53ae2ab</p>
 </body>
 </html>
