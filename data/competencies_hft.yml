@@ -1,0 +1,33 @@
+# Skills for the hft profile (options.competencies: competencies_hft).
+# Same facts as competencies.yml, reordered for low-latency and quantitative systems.
+
+groups:
+  - name: "Low-latency and real-time systems"
+    items:
+      - "Temporal reflection: closed-loop measurement and control of a system's own timing; closed-loop feedback calibration that reduces interrupt-timing jitter by an order of magnitude"
+      - "Performance analysis, tail-latency (\"jitter\") elimination and system tracing"
+      - "Real-time scheduling and synchronous IPC in microkernels; persistent-memory data paths at memory speed (NV-DIMM)"
+
+  - name: "Operating systems"
+    items:
+      - "Linux kernel, memory management and device drivers"
+      - "L4 microkernels, Zephyr, MbedOS, RTOS internals and porting"
+      - "Linux (Debian, Ubuntu, Red Hat) on workstations and datacentre servers; ZFS, IPMI, RAID, GPU servers"
+
+  - name: "Languages and toolchains"
+    items:
+      - "C, GCC/G++, GDB and the GNU toolchain, native and cross-compiled"
+      - "GCC internals and backend development"
+      - "Python, Bash, Git; AI-assisted coding"
+      - "Docker, GitLab CI multi-project pipelines, reproducible container-based SDK builds"
+
+  - name: "Hardware"
+    items:
+      - "ARM and RISC-V platforms; board bring-up, JTAG and RISC-V debug (OpenOCD)"
+      - "Memory hierarchies and non-volatile memory (NV-DIMM, PCM, STT-MRAM); storage systems"
+      - "FPGA boards, peripherals, memory maps and I/O devices"
+
+  - name: "Methods"
+    items:
+      - "Debugging poorly documented hardware and software"
+      - "Technical leadership, mentoring, architecture decisions and end-to-end delivery across international teams"

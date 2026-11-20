@@ -13,9 +13,19 @@
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 
-% Liberation Sans is metric-compatible with Arial and keeps text extraction
-% (and therefore applicant-tracking systems) clean.
-\setmainfont{Liberation Sans}
+% EB Garamond (Octavio Pardo's complete version shipped with TeX Live), loaded
+% by path: the Debian fonts-ebgaramond package is older, its Bold lacks dashes,
+% curly quotes and accents, and fontconfig offers .woff copies xdvipdfmx cannot embed.
+% SemiBold serves as bold. Scale 1.1 matches the old Liberation Sans 10pt colour.
+\setmainfont{EBGaramond}[
+  Path=/usr/share/texlive/texmf-dist/fonts/opentype/public/ebgaramond/,
+  Extension=.otf,
+  UprightFont=*-Regular,
+  ItalicFont=*-Italic,
+  BoldFont=*-SemiBold,
+  BoldItalicFont=*-SemiBoldItalic,
+  Ligatures=TeX,
+  Scale=1.1]
 
 \definecolor{accent}{HTML}{1F4E79}
 \definecolor{text}{HTML}{333333}

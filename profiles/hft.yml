@@ -1,0 +1,25 @@
+name: hft
+label: "Ultra-Low-Latency & Quantitative Systems CV"
+filename: "Sergio_Ruocco_CV_low_latency"
+tagline: "Ultra-low-latency systems, Linux kernel and real-time architecture · Senior Software Engineer"
+bio: hft
+summary_heading: "Profile"
+sections:
+  - summary
+  - skills
+  - projects
+  - experience
+  - patents
+  - publications
+  - education
+options:
+  photo: true
+  tags_as: industry            # same roles as the Industry R&D CV
+  competencies: competencies_hft
+  experience_highlights: false
+  projects: [l4-real-time, nvm-linux, adcps, emass-ai-soc, gcc-16bit]
+  publications: [C7, J5, C6, C12, C4]
+  citation_source: scholar
+  patents: disclosures
+  teaching: none
+order: 4

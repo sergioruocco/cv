@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ profile.short_name }} — Curriculum Vitae</title>
   <meta name="description" content="Curriculum vitae of {{ profile.name }}, {{ tagline }}.">
+  <link rel="canonical" href="{{ profile.website }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ profile.name }} — Curriculum Vitae">
+  <meta property="og:description" content="{{ tagline }}">
+  <meta property="og:url" content="{{ profile.website }}">
+  {% if photo %}<meta property="og:image" content="{{ profile.website }}{{ photo }}">{% endif %}
+  <script type="application/ld+json">{{ person_ld | tojson }}</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

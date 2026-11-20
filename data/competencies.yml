@@ -33,6 +33,7 @@ groups:
   - name: "Methods"
     items:
       - "Real-time scheduling and temporal reflection"
-      - "Performance analysis and system tracing"
+      - default: "Performance analysis and system tracing"
+        industry: "Performance analysis, tail-latency (\"jitter\") elimination and system tracing"
       - "Debugging poorly documented hardware and software"
       - "Technical leadership, mentoring, procurement and project delivery"

@@ -6,3 +6,6 @@ __pycache__/
 # Local working material, not part of the published repository
 lists-of-sergio-cvs.txt
 linkedin.txt
+
+# Private: cover letters live only on the local hft branch
+letters/

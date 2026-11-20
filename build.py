@@ -104,6 +104,7 @@ def load_profiles(names: list[str] | None) -> list[dict]:
         if names and profile["name"] not in names:
             continue
         profiles.append(profile)
+    profiles.sort(key=lambda p: p.get("order", 0))
     missing = set(names or []) - {p["name"] for p in profiles}
     if missing:
         raise SystemExit(f"unknown profile(s): {', '.join(sorted(missing))}")
@@ -321,7 +322,7 @@ def bio_text(data: dict, key: str) -> str:
 
 def render_summary(profile: dict, data: dict) -> str:
     heading = profile.get("summary_heading", "Profile")
-    return f"## {heading}\n\n{bio_text(data, profile['bio'])}\n"
+    return f"## {heading}\n\n{md_em(bio_text(data, profile['bio']))}\n"
 
 
 def render_research_interests(profile: dict, data: dict) -> str:
@@ -350,8 +351,9 @@ def render_education(profile: dict, data: dict) -> str:
 def render_experience(profile: dict, data: dict) -> str:
     chunks = ["## Experience"]
     show_highlights = profile.get("options", {}).get("experience_highlights", True)
+    tag = tag_name(profile)
     for job in data["experience"]:
-        if profile["name"] not in job.get("tags", [profile["name"]]):
+        if tag not in job.get("tags", [tag]):
             continue
         block = [
             r"\needspace{4\baselineskip}",
@@ -366,10 +368,30 @@ def render_experience(profile: dict, data: dict) -> str:
     return "\n\n".join(chunks) + "\n"
 
 
+def competencies(profile: dict, data: dict) -> dict:
+    """data/<options.competencies>.yml, default data/competencies.yml."""
+    return data[profile.get("options", {}).get("competencies", "competencies")]
+
+
+def skill_items(profile: dict, group: dict) -> list[str]:
+    """A group's items for this profile.
+
+    An item is a string (all profiles) or a mapping of profile name -> text,
+    with an optional `default`; profiles with no entry and no default skip it.
+    """
+    items = []
+    for item in group["items"]:
+        if isinstance(item, dict):
+            item = item.get(profile["name"], item.get("default"))
+        if item:
+            items.append(item)
+    return items
+
+
 def render_skills(profile: dict, data: dict) -> str:
     chunks = ["## Technical skills"]
-    for group in data["competencies"]["groups"]:
-        chunks.append(f"**{group['name']}.** " + "; ".join(group["items"]) + ".")
+    for group in competencies(profile, data)["groups"]:
+        chunks.append(f"**{group['name']}.** " + "; ".join(skill_items(profile, group)) + ".")
     return "\n\n".join(chunks) + "\n"
 
 
@@ -379,20 +401,44 @@ def render_capabilities(profile: dict, data: dict) -> str:
         "Engagements range from architecture reviews and feasibility studies to "
         "hands-on porting, driver development and debugging.",
     ]
-    for group in data["competencies"]["groups"]:
-        chunks.append(f"**{group['name']}.** " + "; ".join(group["items"]) + ".")
+    for group in competencies(profile, data)["groups"]:
+        chunks.append(f"**{group['name']}.** " + "; ".join(skill_items(profile, group)) + ".")
     return "\n\n".join(chunks) + "\n"
 
 
-def render_projects(profile: dict, data: dict) -> str:
+def tag_name(profile: dict) -> str:
+    """Profile whose `tags` select experience entries (options.tags_as, else itself)."""
+    return profile.get("options", {}).get("tags_as", profile["name"])
+
+
+def select_projects(profile: dict, data: dict) -> list[dict]:
+    """Projects for a profile, with per-profile `overrides` applied.
+
+    options.projects is "featured", "all", "none", or an explicit list of
+    project ids (shown in that order, regardless of tags and featured).
+    """
     mode = profile.get("options", {}).get("projects", "featured")
     if mode == "none":
+        return []
+    if isinstance(mode, list):
+        by_id = {p["id"]: p for p in data["projects"]}
+        missing = [i for i in mode if i not in by_id]
+        if missing:
+            raise SystemExit(f"unknown project id(s) in profile {profile['name']}: {missing}")
+        projects = [by_id[i] for i in mode]
+    else:
+        projects = [
+            p for p in data["projects"] if profile["name"] in p.get("tags", [profile["name"]])
+        ]
+        if mode == "featured":
+            projects = [p for p in projects if p.get("featured")]
+    return [{**p, **(p.get("overrides") or {}).get(profile["name"], {})} for p in projects]
+
+
+def render_projects(profile: dict, data: dict) -> str:
+    projects = select_projects(profile, data)
+    if not projects:
         return ""
-    projects = [
-        p for p in data["projects"] if profile["name"] in p.get("tags", [profile["name"]])
-    ]
-    if mode == "featured":
-        projects = [p for p in projects if p.get("featured")]
     chunks = ["## Selected projects"]
     for project in projects:
         block = [
@@ -431,7 +477,13 @@ def render_publications(profile: dict, data: dict) -> str:
         return ""
     source = opts.get("citation_source", "none")
     pubs = data["publications"]
-    if mode == "selected":
+    if isinstance(mode, list):
+        by_id = {p["id"]: p for p in pubs}
+        missing = [i for i in mode if i not in by_id]
+        if missing:
+            raise SystemExit(f"unknown publication id(s) in profile {profile['name']}: {missing}")
+        pubs = [by_id[i] for i in mode]
+    elif mode == "selected":
         pubs = [p for p in pubs if p.get("featured")]
         pubs = sorted(pubs, key=lambda p: (-int(p.get("year", 0)), TYPE_ORDER.get(p.get("type"), 9), p.get("id", "")))
     else:
@@ -453,7 +505,7 @@ def render_publications(profile: dict, data: dict) -> str:
     else:
         chunks.append("*Selected publications.*")
 
-    if mode == "selected":
+    if mode == "selected" or isinstance(mode, list):
         chunks.extend(format_pub_line(pub, source) for pub in pubs)
     else:
         current_type = None
@@ -640,15 +692,11 @@ def fix_docx_keep_together(path: Path, profile: dict, data: dict) -> None:
 
     ns = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
     anchors: set[str] = set()
+    tag = tag_name(profile)
     for job in data["experience"]:
-        if profile["name"] in job.get("tags", [profile["name"]]):
+        if tag in job.get("tags", [tag]):
             anchors.add(f"{job['role']} — {job['org']}")
-    projects = [
-        p for p in data["projects"] if profile["name"] in p.get("tags", [profile["name"]])
-    ]
-    if profile.get("options", {}).get("projects", "featured") == "featured":
-        projects = [p for p in projects if p.get("featured")]
-    anchors.update(p["title"] for p in projects)
+    anchors.update(p["title"] for p in select_projects(profile, data))
     anchors = {a for a in anchors if a}
 
     with zipfile.ZipFile(path) as src:
@@ -819,7 +867,26 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
     tagline_profile = next(
         (pr for pr in profiles if pr["name"] == SITE_TAGLINE_PROFILE), profiles[0]
     )
+    person_ld = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": p["short_name"],
+        "honorificPrefix": "Dr.",
+        "url": p["website"],
+        "jobTitle": "Senior Software Engineer",
+        "worksFor": {"@type": "Organization", "name": "EMASS"},
+        "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": data["education"][0]["institution"].split(",")[0],
+        },
+        "nationality": p.get("nationality", ""),
+        "knowsAbout": data["competencies"].get("primary", []),
+        "sameAs": [l["url"] for l in p.get("links", [])],
+    }
+    if p.get("photo"):
+        person_ld["image"] = p["website"] + "photo.jpg"
     index_html = env.get_template("site_index.html.j2").render(
+        person_ld=person_ld,
         profile=p,
         tagline=tagline_profile["tagline"],
         bio=bio_text(data, "academic"),
@@ -857,6 +924,16 @@ def build_site(profiles: list[dict], data: dict, outputs: list[dict]) -> None:
         ),
     )
     (DOCS_DIR / "publications.html").write_text(pubs_html, encoding="utf-8")
+    sitemap = "".join(
+        f"  <url><loc>{p['website']}{page}</loc><lastmod>{today}</lastmod></url>\n"
+        for page in ("", "publications.html")
+    )
+    (DOCS_DIR / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + sitemap + "</urlset>\n",
+        encoding="utf-8",
+    )
     print(f"  site: {DOCS_DIR / 'index.html'}")
 
 

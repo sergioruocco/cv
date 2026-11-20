@@ -24,7 +24,8 @@ academic: >-
   time-sensitive and time-aware computer systems. His PhD introduced temporal
   reflection, a class of computational reflection through which a system can
   represent, observe and control its own temporal behaviour; he designed and
-  implemented a reflective real-time scheduler for the L4 microkernel. At NICTA
+  implemented a reflective real-time scheduler for the L4 microkernel that
+  achieves microsecond-level accuracy entirely at user level. At NICTA
   he analysed and improved the real-time properties of general-purpose L4
   microkernels. At A*STAR and NTU he worked on systems software and programming
   toolchains for non-volatile memory, storage systems, RISC-V
@@ -52,13 +53,16 @@ industry: >-
   going between A*STAR I²R and EMASS, developing the first bare-metal SDK and
   its SPI and camera drivers and isolating hardware bugs in the SoC's SPI
   peripheral. He has a track
-  record of taking poorly documented hardware and turning it into working systems: GCC
-  backends, Linux kernel and driver code, RTOS ports, board-support packages and
+  record of taking poorly documented hardware and turning it into working systems: a GCC
+  backend, Linux kernel and driver code, RTOS ports, board-support packages and
   performance-analysis tools. He is comfortable from board bring-up and JTAG to
   kernel memory management and compiler internals, and has led industry projects
   for Seagate and Micron as well as EU-funded R&D with STMicroelectronics. He
   combines deep technical work with project leadership, procurement and
-  end-to-end delivery.
+  end-to-end delivery. He also brings an original architectural approach to
+  time-sensitive, ultra-low-latency systems: treating temporal behaviour as an
+  observable, controllable runtime object to eliminate tail-latency outliers
+  ("jitter") across OS, memory and hardware layers.
 
 consulting: >-
   Dr. Sergio Ruocco is an embedded-systems and toolchain consultant with {years} years
@@ -73,3 +77,28 @@ consulting: >-
   ECS-DoT ultra-low-power RISC-V AI SoC, and planned and delivered its Zephyr
   RTOS port, mentoring a new team. His clients have included Seagate
   (USA) and Micron Italy, and he has led EU ENIAC projects with STMicroelectronics.
+
+hft: >-
+  Systems engineer with {years} years of experience making time-critical
+  software fast and predictable across the whole stack: real-time operating
+  systems and microkernels, Linux kernel memory management, compiler toolchains
+  and the hardware beneath them. His PhD introduced temporal reflection, which
+  treats a system's timing behaviour as a runtime object it can observe and
+  control; at NICTA he built on it a user-level, fine-grained adaptive real-time
+  scheduler for the L4 microkernel (IEEE RTSS 2006) that reached
+  microsecond-level accuracy without kernel changes, where a 13-line
+  closed-loop calibration tactic cut interrupt-timing jitter by an order of
+  magnitude, and analysed how the
+  synchronous IPC of general-purpose L4 microkernels, and its speed
+  optimisations, affect real-time scheduling and timeliness. At A*STAR he
+  extended Linux memory management so that persistent data can live in
+  non-volatile DIMMs and be processed at memory speed, which led to a
+  collaboration with CERN OpenLab, and applied it to the efficient persistence
+  of financial transactions (ICCCRI 2015). He has written a GCC backend for a
+  custom microcontroller under hard real-time constraints and led a cluster
+  performance study for Seagate USA. He is currently a Senior Software Engineer
+  at EMASS, an NTU/A*STAR spin-off, where he builds the full software stack, the
+  CI/CD build and test pipeline and the Zephyr RTOS port (which he planned and
+  delivered with a newly formed team he mentored) for the ECS-DoT RISC-V AI SoC.
+  He is familiar with computer architecture and with tools at the lowest level
+  of the stack, where the root causes of latency outliers can be traced.
