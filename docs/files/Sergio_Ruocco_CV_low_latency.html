@@ -132,54 +132,63 @@ EMASS (an NTU/A*STAR spin-off), Singapore</p>
 (secure)</a> · <a href="https://scholar.google.com/citations?user=q1574qIAAAAJ">Google
 Scholar</a> · <a href="https://www.linkedin.com/in/sergio-ruocco/">LinkedIn</a> · <a href="https://github.com/sergioruocco">GitHub</a> · <a href="https://sergioruocco.github.io/cv/">Website</a></p>
 <h2 id="profile">Profile</h2>
-<p>Systems engineer with 30 years of experience making time-critical
-software fast and predictable across the whole stack: real-time
-operating systems and microkernels, Linux kernel memory management,
-compiler toolchains and the hardware beneath them. His PhD introduced
-temporal reflection, which treats a system’s timing behaviour as a
-runtime object it can observe and control; at NICTA he built on it a
-user-level, fine-grained adaptive real-time scheduler for the L4
-microkernel (IEEE RTSS 2006) that reached microsecond-level accuracy
-without kernel changes, where a 13-line closed-loop calibration tactic
-cut interrupt-timing jitter by an order of magnitude, and analysed how
-the synchronous IPC of general-purpose L4 microkernels, and its speed
-optimisations, affect real-time scheduling and timeliness. At A*STAR he
-extended Linux memory management so that persistent data can live in
-non-volatile DIMMs and be processed at memory speed, which led to a
-collaboration with CERN OpenLab, and applied it to the efficient
-persistence of financial transactions (ICCCRI 2015). He has written a
-GCC backend for a custom microcontroller under hard real-time
-constraints and led a cluster performance study for Seagate USA. He is
-currently a Senior Software Engineer at EMASS, an NTU/A*STAR spin-off,
-where he builds the full software stack, the CI/CD build and test
-pipeline and the Zephyr RTOS port (which he planned and delivered with a
-newly formed team he mentored) for the ECS-DoT RISC-V AI SoC. He is
-familiar with computer architecture and with tools at the lowest level
-of the stack, where the root causes of latency outliers can be
+<p>Systems engineer and computer scientist with 30 years of experience
+understanding and controlling the timing of software across the whole
+stack: from the hardware through real-time operating systems,
+microkernels, the Linux kernel and compiler toolchains up to software
+architecture. His PhD introduced temporal reflection, part of the
+architectural-reflection family of approaches, which makes a system’s
+timing behaviour an explicit runtime object the system can observe and
+control: a systematic, architecture-level basis for the observability,
+root-cause attribution, compensation and anticipation of latency
+outliers.</p>
+<p>At NICTA he built on it a user-level, fine-grained adaptive real-time
+scheduler for the L4 microkernel (IEEE RTSS 2006) that reached
+microsecond-level accuracy without kernel changes, where a 13-line
+closed-loop calibration tactic cut interrupt-timing jitter by an order
+of magnitude, and analysed how the synchronous IPC of general-purpose L4
+microkernels, and its speed optimisations, affect real-time scheduling
+and timeliness. At A*STAR he extended Linux memory management so that
+persistent data can live in non-volatile DIMMs and be processed at
+memory speed, which led to a collaboration with CERN OpenLab, and
+applied it to the efficient persistence of financial transactions
+(ICCCRI 2015). He has written a GCC backend from scratch for a custom
+microcontroller under hard real-time constraints and led a cluster
+performance study for Seagate USA. He is currently a Senior Software
+Engineer at EMASS, an NTU/A*STAR spin-off, where he builds the full
+software stack of the ECS-DoT RISC-V AI SoC, to which he has ported two
+RTOSes, and the CI/CD pipeline that bakes its SDK into Docker images; he
+planned the Zephyr RTOS port and delivered it with a newly formed team
+he mentored. He approaches hard new ground as a scientist,
+understanding, modelling and measuring a system before changing it, and
+is familiar with computer architecture and with tools at the lowest
+level of the stack, where the root causes of latency outliers can be
 traced.</p>
 <h2 id="technical-skills">Technical skills</h2>
 <p><strong>Low-latency and real-time systems.</strong> Temporal
-reflection: closed-loop measurement and control of a system’s own
-timing; closed-loop feedback calibration that reduces interrupt-timing
-jitter by an order of magnitude; Performance analysis, tail-latency
-(“jitter”) elimination and system tracing; Real-time scheduling and
-synchronous IPC in microkernels; persistent-memory data paths at memory
-speed (NV-DIMM).</p>
+reflection: timing as an explicit, observable and controllable part of
+the system architecture; closed-loop feedback calibration that reduced
+interrupt-timing jitter by an order of magnitude; Performance analysis,
+tail-latency (“jitter”) elimination and system tracing; Real-time
+scheduling and synchronous IPC in microkernels; persistent-memory data
+paths at memory speed (NV-DIMM).</p>
 <p><strong>Operating systems.</strong> Linux kernel, memory management
 and device drivers; L4 microkernels, Zephyr, MbedOS, RTOS internals and
 porting; Linux (Debian, Ubuntu, Red Hat) on workstations and datacentre
 servers; ZFS, IPMI, RAID, GPU servers.</p>
 <p><strong>Languages and toolchains.</strong> C, GCC/G++, GDB and the
 GNU toolchain, native and cross-compiled; GCC internals and backend
-development; Python, Bash, Git; AI-assisted coding; Docker, GitLab CI
-multi-project pipelines, reproducible container-based SDK builds.</p>
+development; Python, Bash, Git; Java (academic research, early 2000s);
+AI-assisted coding; Docker, GitLab CI multi-project pipelines,
+reproducible container-based SDK builds.</p>
 <p><strong>Hardware.</strong> ARM and RISC-V platforms; board bring-up,
 JTAG and RISC-V debug (OpenOCD); Memory hierarchies and non-volatile
 memory (NV-DIMM, PCM, STT-MRAM); storage systems; FPGA boards,
 peripherals, memory maps and I/O devices.</p>
-<p><strong>Methods.</strong> Debugging poorly documented hardware and
+<p><strong>Methods.</strong> Object-oriented analysis and design;
+software architecture; Debugging poorly documented hardware and
 software; Technical leadership, mentoring, architecture decisions and
-end-to-end delivery across international teams.</p>
+end-to-end delivery with international colleagues.</p>
 <h2 id="selected-projects">Selected projects</h2>
 <p><strong>User-level reflective real-time scheduling and jitter
 reduction on L4 microkernel</strong></p>
@@ -221,12 +230,12 @@ ECS-DoT RISC-V SoC</strong></p>
 <p>Device drivers, bare-metal SDK and runtime, GCC RISC-V toolchains and
 the Zephyr RTOS port (planned, approved and delivered on time with a
 newly formed team he mentored) for ECS-DoT, a custom ultra-low-power SoC
-with a RISC-V core and dedicated AI accelerators; plus the
-container-based CI/CD build, test and release pipeline on self-hosted
-GitLab.</p>
-<p><strong>Impact:</strong> Enables AI workloads on the ECS-DoT SoC;
-builds on the AI-accelerator driver and RTOS work done at A*STAR
-I²R.</p>
+with a RISC-V core and dedicated AI accelerators; plus the CI/CD
+pipeline on self-hosted GitLab that builds, tests and bakes the SDKs
+into Docker images.</p>
+<p><strong>Impact:</strong> Enables AI workloads on the ECS-DoT SoC.
+Zephyr is its second RTOS, after the MbedOS port and the AI-accelerator
+driver he delivered at A*STAR I²R.</p>
 <p><strong>GCC compiler backend for a custom non-volatile-memory
 microcontroller</strong></p>
 <p><em>2009 – 2010 · Micron Italy (formerly STMicroelectronics) ·
@@ -337,6 +346,6 @@ graded.</p>
 <em>Università degli Studi di Milano, Italy — 110/110 cum laude</em></p>
 <p>Thesis: <em>HyperReal: a paradigm for the design and synthesis of
 hard real-time control systems</em>.</p>
-<p class="stamp">Updated 20 November 2026 · git 53ae2ab</p>
+<p class="stamp">Updated 20 November 2026 · git 3f80e68</p>
 </body>
 </html>
