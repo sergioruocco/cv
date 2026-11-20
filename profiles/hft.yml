@@ -14,6 +14,7 @@ sections:
   - education
 options:
   photo: true
+  work_pass: true
   tags_as: industry            # same roles as the Industry R&D CV
   competencies: competencies_hft
   experience_highlights: false

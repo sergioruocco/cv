@@ -224,6 +224,8 @@ def header_markdown(profile: dict, data: dict) -> str:
         line1.append(p["phone"])
     if p.get("nationality"):
         line1.append(f"Nationality: {p['nationality']}")
+    if p.get("work_pass") and profile.get("options", {}).get("work_pass"):
+        line1.append(p["work_pass"])
     line2 = [f"[{primary['label']}](mailto:{primary['address']})"]
     line2 += [f"[{e['label']}](mailto:{e['address']})" for e in secondary]
     line2 += [f"[{link['label']}]({link['url']})" for link in p.get("links") or []]
@@ -259,6 +261,8 @@ def header_latex(profile: dict, data: dict) -> str:
         line1.append(tex_escape(p["phone"]))
     if p.get("nationality"):
         line1.append(tex_escape(f"Nationality: {p['nationality']}"))
+    if p.get("work_pass") and profile.get("options", {}).get("work_pass"):
+        line1.append(tex_escape(p["work_pass"]))
     line2 = [
         rf"\href{{mailto:{primary['address']}}}{{{tex_escape(primary['label'])}}}"
     ]

@@ -33,6 +33,9 @@ links:
 
 nationality: "Italian"
 
+# Work authorisation; shown only by profiles with options.work_pass: true.
+work_pass: "Singapore Employment Pass"
+
 # Head-and-shoulders photo (round crop). Each profile turns it on with
 # options.photo; the website uses the square assets/photo.jpg.
 photo: "assets/photo-round.png"

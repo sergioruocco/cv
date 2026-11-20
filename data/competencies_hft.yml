@@ -4,7 +4,7 @@
 groups:
   - name: "Low-latency and real-time systems"
     items:
-      - "Temporal reflection: timing as an explicit, observable and controllable part of the system architecture; closed-loop feedback calibration that reduced interrupt-timing jitter by an order of magnitude"
+      - "Temporal reflection: timing as an explicit, observable and controllable object of the whole system (hardware, OS, runtime and application); closed-loop feedback calibration that reduced interrupt-timing jitter by an order of magnitude"
       - "Performance analysis, tail-latency (\"jitter\") elimination and system tracing"
       - "Real-time scheduling and synchronous IPC in microkernels; persistent-memory data paths at memory speed (NV-DIMM)"
 
