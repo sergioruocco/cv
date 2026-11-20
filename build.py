@@ -326,7 +326,10 @@ def bio_text(data: dict, key: str) -> str:
 
 def render_summary(profile: dict, data: dict) -> str:
     heading = profile.get("summary_heading", "Profile")
-    return f"## {heading}\n\n{md_em(bio_text(data, profile['bio']))}\n"
+    # Paragraphs of a multi-paragraph bio get a visible gap in the PDF
+    # (raw LaTeX is dropped from the DOCX and HTML outputs).
+    paragraphs = md_em(bio_text(data, profile["bio"])).split("\n\n")
+    return f"## {heading}\n\n" + "\n\n\\medskip\n\n".join(paragraphs) + "\n"
 
 
 def render_research_interests(profile: dict, data: dict) -> str:

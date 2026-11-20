@@ -102,8 +102,10 @@ hft: >-
   led to a collaboration with CERN OpenLab, and applied it to the efficient
   persistence of financial transactions (ICCCRI 2015). He has written a GCC
   backend from scratch for a custom microcontroller under hard real-time
-  constraints and led a cluster performance study for Seagate USA. He is
-  currently a Senior Software Engineer at EMASS, an NTU/A*STAR spin-off, where
+  constraints and led a cluster performance study for Seagate USA.
+
+
+  He is currently a Senior Software Engineer at EMASS, an NTU/A*STAR spin-off, where
   he builds the full software stack of the ECS-DoT RISC-V AI SoC, to which he
   has ported two RTOSes, and the CI/CD pipeline that bakes its SDK into Docker
   images; he planned the Zephyr RTOS port and delivered it with a newly formed
