@@ -4,7 +4,7 @@
 groups:
   - name: "Low-latency and real-time systems"
     items:
-      - "Temporal reflection: closed-loop measurement and control of a system's own timing; closed-loop feedback calibration that reduces interrupt-timing jitter by an order of magnitude"
+      - "Temporal reflection: timing as an explicit, observable and controllable part of the system architecture; closed-loop feedback calibration that reduced interrupt-timing jitter by an order of magnitude"
       - "Performance analysis, tail-latency (\"jitter\") elimination and system tracing"
       - "Real-time scheduling and synchronous IPC in microkernels; persistent-memory data paths at memory speed (NV-DIMM)"
 
@@ -18,7 +18,7 @@ groups:
     items:
       - "C, GCC/G++, GDB and the GNU toolchain, native and cross-compiled"
       - "GCC internals and backend development"
-      - "Python, Bash, Git; AI-assisted coding"
+      - "Python, Bash, Git; Java (academic research, early 2000s); AI-assisted coding"
       - "Docker, GitLab CI multi-project pipelines, reproducible container-based SDK builds"
 
   - name: "Hardware"
@@ -29,5 +29,6 @@ groups:
 
   - name: "Methods"
     items:
+      - "Object-oriented analysis and design; software architecture"
       - "Debugging poorly documented hardware and software"
-      - "Technical leadership, mentoring, architecture decisions and end-to-end delivery across international teams"
+      - "Technical leadership, mentoring, architecture decisions and end-to-end delivery with international colleagues"

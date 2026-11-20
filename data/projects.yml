@@ -19,8 +19,13 @@
         Device drivers, bare-metal SDK and runtime, GCC RISC-V toolchains and the
         Zephyr RTOS port (planned, approved and delivered on time with a newly
         formed team he mentored) for ECS-DoT, a custom ultra-low-power SoC with a
-        RISC-V core and dedicated AI accelerators; plus the container-based CI/CD
-        build, test and release pipeline on self-hosted GitLab.
+        RISC-V core and dedicated AI accelerators; plus the CI/CD pipeline on
+        self-hosted GitLab that builds, tests and bakes the SDKs into Docker
+        images.
+      impact: >-
+        Enables AI workloads on the ECS-DoT SoC. Zephyr is its second RTOS,
+        after the MbedOS port and the AI-accelerator driver he delivered at
+        A*STAR I²R.
 
 - id: ecsdot-boot-agent
   period: "2026 – present"

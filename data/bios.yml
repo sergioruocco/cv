@@ -79,26 +79,34 @@ consulting: >-
   (USA) and Micron Italy, and he has led EU ENIAC projects with STMicroelectronics.
 
 hft: >-
-  Systems engineer with {years} years of experience making time-critical
-  software fast and predictable across the whole stack: real-time operating
-  systems and microkernels, Linux kernel memory management, compiler toolchains
-  and the hardware beneath them. His PhD introduced temporal reflection, which
-  treats a system's timing behaviour as a runtime object it can observe and
-  control; at NICTA he built on it a user-level, fine-grained adaptive real-time
-  scheduler for the L4 microkernel (IEEE RTSS 2006) that reached
-  microsecond-level accuracy without kernel changes, where a 13-line
-  closed-loop calibration tactic cut interrupt-timing jitter by an order of
-  magnitude, and analysed how the
-  synchronous IPC of general-purpose L4 microkernels, and its speed
-  optimisations, affect real-time scheduling and timeliness. At A*STAR he
-  extended Linux memory management so that persistent data can live in
-  non-volatile DIMMs and be processed at memory speed, which led to a
-  collaboration with CERN OpenLab, and applied it to the efficient persistence
-  of financial transactions (ICCCRI 2015). He has written a GCC backend for a
-  custom microcontroller under hard real-time constraints and led a cluster
-  performance study for Seagate USA. He is currently a Senior Software Engineer
-  at EMASS, an NTU/A*STAR spin-off, where he builds the full software stack, the
-  CI/CD build and test pipeline and the Zephyr RTOS port (which he planned and
-  delivered with a newly formed team he mentored) for the ECS-DoT RISC-V AI SoC.
-  He is familiar with computer architecture and with tools at the lowest level
-  of the stack, where the root causes of latency outliers can be traced.
+  Systems engineer and computer scientist with {years} years of experience
+  understanding and controlling the timing of software across the whole stack:
+  from the hardware through real-time operating systems, microkernels, the Linux
+  kernel and compiler toolchains up to software architecture. His PhD
+  introduced temporal reflection, part of the architectural-reflection family
+  of approaches, which makes a system's timing behaviour an explicit runtime
+  object the system can observe and control: a systematic, architecture-level
+  basis for the observability, root-cause attribution, compensation and
+  anticipation of latency outliers.
+
+
+  At NICTA he built on it a user-level,
+  fine-grained adaptive real-time scheduler for the L4 microkernel (IEEE RTSS
+  2006) that reached microsecond-level accuracy without kernel changes, where a
+  13-line closed-loop calibration tactic cut interrupt-timing jitter by an order
+  of magnitude, and analysed how the synchronous IPC of general-purpose L4
+  microkernels, and its speed optimisations, affect real-time scheduling and
+  timeliness. At A*STAR he extended Linux memory management so that persistent
+  data can live in non-volatile DIMMs and be processed at memory speed, which
+  led to a collaboration with CERN OpenLab, and applied it to the efficient
+  persistence of financial transactions (ICCCRI 2015). He has written a GCC
+  backend from scratch for a custom microcontroller under hard real-time
+  constraints and led a cluster performance study for Seagate USA. He is
+  currently a Senior Software Engineer at EMASS, an NTU/A*STAR spin-off, where
+  he builds the full software stack of the ECS-DoT RISC-V AI SoC, to which he
+  has ported two RTOSes, and the CI/CD pipeline that bakes its SDK into Docker
+  images; he planned the Zephyr RTOS port and delivered it with a newly formed
+  team he mentored. He approaches hard new ground as a scientist,
+  understanding, modelling and measuring a system before changing it, and is
+  familiar with computer architecture and with tools at the lowest level of the
+  stack, where the root causes of latency outliers can be traced.
