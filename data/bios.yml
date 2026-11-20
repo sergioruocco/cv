@@ -79,10 +79,11 @@ consulting: >-
   (USA) and Micron Italy, and he has led EU ENIAC projects with STMicroelectronics.
 
 hft: >-
-  Systems engineer and computer scientist with {years} years of experience
-  understanding and controlling the timing of software across the whole stack:
-  from the hardware through real-time operating systems, microkernels, the Linux
-  kernel and compiler toolchains up to software architecture. His PhD
+  Systems engineer and computer scientist with {years} years of experience in
+  systems software engineering, from the hardware through real-time operating
+  systems, microkernels, the Linux kernel and compiler toolchains up to software
+  architecture, with a special interest in its implications for the latency and
+  real-time performance of time-sensitive applications. His PhD
   introduced temporal reflection, part of the architectural-reflection family
   of approaches, which makes a system's timing behaviour an explicit runtime
   object the system can observe and control: a systematic, architecture-level
