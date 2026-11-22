@@ -64,19 +64,6 @@ industry: >-
   observable, controllable runtime object to eliminate tail-latency outliers
   ("jitter") across OS, memory and hardware layers.
 
-consulting: >-
-  Dr. Sergio Ruocco is an embedded-systems and toolchain consultant with {years} years
-  of experience in Linux kernel and driver development, real-time operating
-  systems, compiler toolchains, and non-volatile memory. He helps
-  teams de-risk unfamiliar hardware and software: porting operating systems and
-  SDKs to new SoCs, writing and debugging kernel drivers, building GCC backends,
-  improving real-time behaviour, analysing system performance, and setting up
-  CI/CD build and test pipelines and IT/DevOps infrastructure. He is currently a
-  Senior Software Engineer at EMASS, an NTU/A*STAR spin-off, where he builds the
-  full software stack and the CI/CD and IT/DevOps infrastructure for the
-  ECS-DoT ultra-low-power RISC-V AI SoC, and planned and delivered its Zephyr
-  RTOS port, mentoring a new team. His clients have included Seagate
-  (USA) and Micron Italy, and he has led EU ENIAC projects with STMicroelectronics.
 
 hft: >-
   Systems engineer and computer scientist with {years} years of experience in

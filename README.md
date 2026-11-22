@@ -16,7 +16,6 @@ That writes:
 |---|---|
 | `output/Sergio_Ruocco_CV_academic.pdf` | Full academic/research CV (5 pages) |
 | `output/Sergio_Ruocco_CV_industry.pdf` | Industry R&D CV (3 pages) |
-| `output/Sergio_Ruocco_CV_consulting.pdf` | Consulting/contractor CV (3 pages) |
 | matching `.docx` and `.html` files | Editable and web versions |
 | `docs/index.html` | Personal website |
 | `docs/publications.html` | Full publication list |
@@ -30,7 +29,7 @@ the same build.
 ```
 data/                  content, one file per topic
   profile.yml          name, address, phone, emails, links
-  bios.yml             short / academic / industry / consulting summaries
+  bios.yml             short / academic / industry / low-latency summaries
   education.yml
   experience.yml
   competencies.yml     competency areas and technical-skill groups
@@ -48,7 +47,6 @@ data/                  content, one file per topic
 profiles/              audience choices
   academic.yml
   industry.yml
-  consulting.yml
 
 templates/
   cv.latex             XeLaTeX template for PDFs
@@ -88,10 +86,10 @@ output/                generated CVs (git-ignored)
 - **A project** uses `featured: true` to appear in the shorter profiles.
 - **Experience entries and projects** carry a `tags` list. An item is shown only
   in profiles named in that list, so the same data can be rich for one audience
-  and concise for another. For example, the pre-2004 roles are tagged
-  `[consulting]` because they show breadth to clients but are noise on a senior
-  industry CV.
-- **Avoid duplicate detail.** The industry and consulting profiles set
+  and concise for another. The pre-2004 roles are tagged only
+  `[consulting]`; that profile was retired on 2026-11-22 (an Employment Pass
+  does not allow outside consulting), so they are currently not shown.
+- **Avoid duplicate detail.** The industry profile sets
   `experience_highlights: false` and put the technical depth in
   `Selected projects`; the academic profile keeps the detailed experience
   timeline and uses projects only as a highlight reel.
@@ -184,5 +182,3 @@ content.
 - Publication-list completeness: every work OpenAlex lists for the author is
   in `publications.yml` (checked November 2026). Papers indexed only elsewhere
   (e.g. Google Scholar, DBLP) must be added manually.
-- Consulting engagements are subject to case-by-case management approval; the
-  consulting CV is retained on that basis.

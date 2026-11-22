@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: all academic industry consulting site citations reference clean
+.PHONY: all academic industry site citations reference clean
 
 all:
 	$(PYTHON) build.py --all
@@ -10,9 +10,6 @@ academic:
 
 industry:
 	$(PYTHON) build.py --profile industry
-
-consulting:
-	$(PYTHON) build.py --profile consulting
 
 site:
 	$(PYTHON) build.py --site
