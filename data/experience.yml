@@ -69,7 +69,7 @@
     industry contracts and European research grants.
   highlights:
     - "Principal Investigator and technical lead for UNIMIB in EU ENIAC SMART (€302,400) and TOISE (€556,000), with Micron Italy and STMicroelectronics."
-    - "Secured two Micron R&D contracts, including the port of GCC to a custom 16-bit microcontroller for phase-change memory chips."
+    - "Secured two Micron R&D contracts: the port of GCC to a custom 16-bit microcontroller for phase-change memory chips, and an investigation of how the low-level specifications of non-volatile memories affect Android boot time."
     - "Project leader of IMUD/Cyber-ADI, a long-running, low-power wireless real-time inertial monitoring device for wireless sensor-network research."
     - "Taught graduate Computer Architecture and undergraduate Real-time Embedded Systems."
   tags: [academic, industry, consulting]
