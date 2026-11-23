@@ -164,6 +164,18 @@
     hft:
       title: "GCC compiler backend for a custom non-volatile-memory microcontroller"
 
+- id: nvm-android-boot
+  period: "2012 – 2014"
+  title: "Non-volatile memory performance and Android boot time"
+  context: "Micron Italy · Università di Milano-Bicocca"
+  description: >-
+    Investigated how the low-level specifications of Micron's non-volatile
+    memories influence system performance, measured as Android boot time.
+  impact: >-
+    Delivered under a second Micron R&D contract.
+  featured: true
+  tags: [industry, academic]
+
 - id: adcps
   period: "2017 – 2019"
   title: "Active Discs Clusters Performance Study (ADCPS)"
