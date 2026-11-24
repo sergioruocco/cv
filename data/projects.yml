@@ -41,6 +41,20 @@
   featured: true
   tags: [industry, consulting, academic]
 
+- id: ecsdot-dvfs
+  period: "2026"
+  title: "Power-management (DVFS) demonstrator for the ECS-DoT SoC"
+  context: "EMASS · ECS-DoT development boards"
+  description: >-
+    Led the SoC's power-management work: set the goal and scope, designed the
+    protocol between the SoC and its board controller, and diagnosed the key
+    timing error in the clock-change sequence.
+  impact: >-
+    On silicon, core power fell by 71% in low-power mode and 80% with the clock
+    stopped.
+  featured: true
+  tags: [industry, consulting, academic]
+
 - id: mbedos-ecsdot
   period: "2020 – 2024"
   title: "MbedOS and SDK port to the ECS-DoT RISC-V SoC"
@@ -111,6 +125,11 @@
   featured: true
   tags: [academic, industry, consulting]
   overrides:
+    industry:
+      description: >-
+        Designed and implemented a reflective real-time scheduler for L4
+        microkernels, with microsecond-level accuracy, entirely at user level and
+        without kernel changes.
     hft:
       title: "User-level reflective real-time scheduling and jitter reduction on L4 microkernel"
       description: >-
@@ -203,6 +222,10 @@
     produced tools and techniques for advanced embedded firmware.
   featured: true
   tags: [academic, industry, consulting]
+  overrides:
+    industry:
+      impact: >-
+        Funded a team of post-docs and research engineers.
 
 - id: imud
   period: "2007 – 2008"
