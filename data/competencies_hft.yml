@@ -1,5 +1,5 @@
 # Skills for the hft profile (options.competencies: competencies_hft).
-# Same facts as competencies.yml, reordered for low-latency and quantitative systems.
+# Same facts as competencies.yml, reordered for low-latency systems.
 
 groups:
   - name: "Low-latency and real-time systems"
